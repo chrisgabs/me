@@ -4,6 +4,8 @@
     import { Button } from "$lib/components/ui/button";
     import * as Tabs from "$lib/components/ui/tabs";
     import tictactoeImage from '$lib/assets/tictactoes.png';
+    import { Separator } from "$lib/components/ui/separator";
+    import bidImage from '$lib/assets/bird.jpg';
     import samplePicture from '$lib/assets/sample.png';
 </script>
 
@@ -119,14 +121,14 @@
             <h2 class="font-bold text-2xl">Professional Background</h2>
         </div>
         
-        <Tabs.Root value="work">
+        <Tabs.Root value="school">
         <Tabs.List class="text-muted-foreground w-full justify-start rounded-none bg-transparent p-0">
             <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work Experience</Tabs.Trigger>
-            <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic Achievements</Tabs.Trigger>
+            <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic Experience</Tabs.Trigger>
         </Tabs.List>
             <Tabs.Content value="work">
-            <div class="mt-3 rounded-sm border shadow-sm p-4">
-            <!-- <div class="mt-9"> -->
+            <!-- <div class="mt-3 rounded-sm border shadow-sm p-4"> -->
+            <div class="mt-5">
                 <ol class="flex flex-col gap-10">
                     <li>
                         <div class="flex flex-col gap-3">
@@ -135,7 +137,7 @@
                             </div>
                             <div>
                                 <h3 class="mb-1">
-                                    <span class="font-semibold text-lg leading-tight">Assoc Applications Developer -
+                                    <span class="font-semibold text-lg leading-normal">Assoc Applications Developer -
                                         <span class="inline-flex items-center gap-1">
                                             Oracle
                                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
@@ -159,7 +161,7 @@
                             <div>
                                 <h3 class="mb-1">
                                     <div class="">
-                                        <span class="font-semibold text-lg leading-tight">Software Developer Intern -
+                                        <span class="font-semibold text-lg leading-normal">Software Developer Intern -
                                             <span class="inline-flex items-center gap-1">
                                                 Trend Micro
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
@@ -172,7 +174,7 @@
                                     <li><Badge variant="secondary">AWS</Badge></li>
                                     <li><Badge variant="secondary">Python</Badge></li>
                                     <li><Badge variant="secondary">Docker</Badge></li>
-                                    <li><Badge variant="secondary">Github Actions</Badge></li>
+                                    <li><Badge variant="secondary" class="whitespace-nowrap">Github Actions</Badge></li>
                                 </ul>
                             </div>
                         </div>
@@ -185,7 +187,7 @@
                             <div>
                                 <h3 class="mb-1">
                                     <div class="">
-                                        <span class="font-semibold text-lg leading-tight">Wordpress Developer -
+                                        <span class="font-semibold text-lg leading-normal">Wordpress Developer -
                                             <span class="inline-flex items-center gap-1">
                                                 SubicBayNews
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
@@ -205,15 +207,124 @@
             </div>
             </Tabs.Content>
             <Tabs.Content value="school">
-                Hatdog
+            <div class="flex flex-col gap-4 mt-5">
+                <div>
+                    <div class="inline-flex whitespace-nowrap w-80 mb-2">
+                        <span class="overflow-auto text-xs">Academic Achievements</span>
+                    </div>
+                    <ol class="flex flex-col gap-4">
+                        <li>
+                            <div class="flex flex-col gap-3">
+                                <div>
+                                    <h3 class="mb-2">
+                                        <span class="inline-flex items-center gap-1 font-semibold text-lg leading-normal">
+                                            B.S. in Computer Science, achieved in 2023
+                                        </span>
+                                    </h3>
+                                    <ul class="flex flex-col gap-1">
+                                        <li>
+                                            <div class="flex gap-5">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Graduated with with great distinction (Magna cum laude)</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex gap-5">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Conferred by Saint Louis University (Baguio City, PH)</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <div class="inline-flex whitespace-nowrap w-80 mb-2">
+                        <span class="overflow-auto text-xs">Research Work</span>
+                    </div>
+                    <ol class="flex flex-col gap-4">
+                        <li>
+                            <div class="flex flex-col gap-3">
+                                <div>
+                                    <h3 class="mb-2">
+                                        <span class="inline-flex items-center gap-1 font-semibold text-lg leading-normal">
+                                            Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)
+                                        </span>
+                                    </h3>
+                                    <ul class="flex flex-col gap-1">
+                                        <li>
+                                            <div class="flex gap-4">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.”</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex gap-4">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex flex-col gap-3">
+                                <div>
+                                    <h3 class="mb-2">
+                                        <span class="inline-flex items-center gap-1 font-semibold text-lg leading-normal">
+                                            A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)
+                                        </span>
+                                    </h3>
+                                    <ul class="flex flex-col gap-1">
+                                        <li>
+                                            <div class="flex gap-4">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex flex-col gap-3">
+                                <div>
+                                    <h3 class="mb-2">
+                                        <span class="inline-flex items-center gap-1 font-semibold text-lg leading-normal">
+                                            Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)
+                                        </span>
+                                    </h3>
+                                    <ul class="flex flex-col gap-1">
+                                        <li>
+                                            <div class="flex gap-4">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Accepted for presentation at the International Conference in IT Education (ICITE2023).</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex gap-4">
+                                                <div class="relative inline-flex h-0.5 w-2 bg-black flex-shrink-0 mt-2"></div>
+                                                <p class="leading-relaxed text-sm tracking-wide">Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
             </Tabs.Content>
         </Tabs.Root>
 
     </section>
 
     <section id="experience" class="mb-16">
-        <div class="mb-7">
-            <h2 class="font-bold text-2xl">Selected Projects</h2>
+        <div class="mb-7 w-full">
+            <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
         <div>
             <ol class="flex flex-col gap-10">
@@ -226,6 +337,40 @@
                     </h3>
                     <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 outline outline-1 rounded-sm outline-slate-200">
                         <img src="{samplePicture}" alt="tictactoe" class="object-cover w-full h-full"/>
+                    </div>
+                    <ul class="flex gap-2 mb-3">
+                        <li><Badge variant="secondary">Golang</Badge></li>
+                        <li><Badge variant="secondary">SvelteKit</Badge></li>
+                        <li><Badge variant="secondary">DevOps</Badge></li>
+                        <li><Badge variant="secondary">AWS</Badge></li>
+                    </ul>
+                    <p class="leading-relaxed mb-2 text-sm tracking-wide">Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.</p>
+                    <div class="flex gap-3">
+                        <button class="">
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
+                                Github
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </span>
+                        </button>
+                        <button class="">
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
+                                Live Demo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="flex flex-col gap-1">
+                    <h3 class="mb-3">
+                        <span class="inline-flex font-semibold text-lg">
+                            Tictactoe 2
+                        </span>
+                    </h3>
+                    <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 outline outline-1 rounded-sm outline-slate-200">
+                        <img src="{bidImage}" alt="tictactoe" class="object-cover w-full h-full"/>
                     </div>
                     <ul class="flex gap-2 mb-3">
                         <li><Badge variant="secondary">Golang</Badge></li>
