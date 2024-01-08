@@ -83,7 +83,7 @@
                 </li>
                 <li>
                     <div class="group flex flex-row gap-2 items-center ">
-                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Blog</p>
+                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Writing</p>
                     </div>
                 </li>
             </ul>
@@ -129,9 +129,10 @@
             <Tabs.Content value="work">
             <!-- <div class="mt-3 rounded-sm border shadow-sm p-4"> -->
             <div class="mt-5">
-                <ol class="flex flex-col gap-10">
-                    <li>
-                        <div class="flex flex-col gap-3">
+                <ol class="flex flex-col">
+                    <li class="group">
+                        <div class="absolute left-[2.6rem] w-3.5 h-3.5 mt-0.5 bg-gray-200 rounded-full group-hover:bg-slate-300"></div>
+                        <div class="flex flex-col gap-3 border-l border-dotted pl-4 pb-10 group-hover:border-solid transition-all">
                             <div class="inline-flex whitespace-nowrap w-80">
                                 <span class="overflow-auto text-xs">2023 - Present</span>
                             </div>
@@ -153,8 +154,9 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="flex flex-col gap-3">
+                    <li class="group">
+                        <div class="absolute left-[2.6rem] w-3.5 h-3.5 mt-0.5 bg-gray-200 rounded-full group-hover:bg-slate-300"></div>
+                        <div class="flex flex-col gap-3 border-l border-dotted pl-4 pb-10 group-hover:border-solid transition-all">
                             <div class="inline-flex whitespace-nowrap w-80">
                                 <span class="overflow-auto text-xs">Jun - Aug 2022</span>
                             </div>
@@ -179,8 +181,9 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="flex flex-col gap-3">
+                    <li class="group">
+                        <div class="absolute left-[2.6rem] w-3.5 h-3.5 mt-0.5 bg-gray-200 rounded-full group-hover:bg-slate-300"></div>
+                        <div class="flex flex-col gap-3 border-l border-dotted pl-4 pb-4 group-hover:border-solid transition-all">
                             <div class="inline-flex whitespace-nowrap w-80">
                                 <span class="overflow-auto text-xs">May - July 2019</span>
                             </div>
@@ -208,7 +211,7 @@
             </Tabs.Content>
             <Tabs.Content value="school">
             <div class="flex flex-col gap-4 mt-5">
-                <div>
+                <div class="border-l pl-4">
                     <div class="inline-flex whitespace-nowrap w-80 mb-2">
                         <span class="overflow-auto text-xs">Academic Achievements</span>
                     </div>
@@ -240,7 +243,7 @@
                         </li>
                     </ol>
                 </div>
-                <div>
+                <div class="border-l pl-4">
                     <div class="inline-flex whitespace-nowrap w-80 mb-2">
                         <span class="overflow-auto text-xs">Research Work</span>
                     </div>
@@ -322,48 +325,14 @@
 
     </section>
 
-    <section id="experience" class="mb-16">
+    <section id="projects" class="mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
         <div>
-            <ol class="flex flex-col gap-10">
+            <ol class="flex flex-col gap-6">
             <li>
-                <div class="flex flex-col gap-1">
-                    <h3 class="mb-3">
-                        <span class="inline-flex font-semibold text-lg">
-                            Tictactoe 2
-                        </span>
-                    </h3>
-                    <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 outline outline-1 rounded-sm outline-slate-200">
-                        <img src="{samplePicture}" alt="tictactoe" class="object-cover w-full h-full"/>
-                    </div>
-                    <ul class="flex gap-2 mb-3">
-                        <li><Badge variant="secondary">Golang</Badge></li>
-                        <li><Badge variant="secondary">SvelteKit</Badge></li>
-                        <li><Badge variant="secondary">DevOps</Badge></li>
-                        <li><Badge variant="secondary">AWS</Badge></li>
-                    </ul>
-                    <p class="leading-relaxed mb-2 text-sm tracking-wide">Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.</p>
-                    <div class="flex gap-3">
-                        <button class="">
-                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
-                                Github
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                            </span>
-                        </button>
-                        <button class="">
-                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
-                                Live Demo
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 p-4 bg-gradient-to-b from-stone-100">
                     <h3 class="mb-3">
                         <span class="inline-flex font-semibold text-lg">
                             Tictactoe 2
@@ -397,7 +366,41 @@
             </li>
 
             <li>
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 p-4 bg-gradient-to-b from-stone-100">
+                    <h3 class="mb-3">
+                        <span class="inline-flex font-semibold text-lg">
+                            Tictactoe 2
+                        </span>
+                    </h3>
+                    <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 outline outline-1 rounded-sm outline-slate-200">
+                        <img src="{bidImage}" alt="tictactoe" class="object-cover w-full h-full"/>
+                    </div>
+                    <ul class="flex gap-2 mb-3">
+                        <li><Badge variant="secondary">Golang</Badge></li>
+                        <li><Badge variant="secondary">SvelteKit</Badge></li>
+                        <li><Badge variant="secondary">DevOps</Badge></li>
+                        <li><Badge variant="secondary">AWS</Badge></li>
+                    </ul>
+                    <p class="leading-relaxed mb-2 text-sm tracking-wide">Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.</p>
+                    <div class="flex gap-3">
+                        <button class="">
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
+                                Github
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </span>
+                        </button>
+                        <button class="">
+                            <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
+                                Live Demo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="flex flex-col gap-1 p-4 bg-gradient-to-b from-stone-100">
                     <h3 class="mb-3">
                         <span class="inline-flex font-semibold text-lg">
                             Tictactoe 2
