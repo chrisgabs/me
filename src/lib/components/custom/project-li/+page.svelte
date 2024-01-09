@@ -9,7 +9,7 @@
 </script>
 
 <li>
-    <div class="flex flex-col gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700">
+    <div class="flex flex-col gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl">
         <h3 class="mb-3">
             <span class="inline-flex font-bold text-lg">
                 {title}

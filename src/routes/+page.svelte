@@ -14,11 +14,11 @@
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
 </script>
 
-<!-- <div class="bg-slate-950 sm:bg-slate-800 md:bg-slate-500 lg:bg-slate-200 xl:bg-slate-50 h-[5px]"></div> -->
+<div class="sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-slate-200 xl:bg-slate-50 w-full h-[5px]"></div>
 
-<div class="h-screen">
+<div class="flex flex-col w-fit sm:max-w-2xl sm:mx-auto">
 
-    <header class="flex h-screen px-12 items-center text-slate-900 ">
+    <header class="flex h-screen px-12 items-center text-slate-900">
         <div class="flex flex-col justify-between min-h-content gap-20">
             <div>
                 <div class="flex mb-2 gap-2">
@@ -126,7 +126,7 @@
             <h2 class="font-bold text-2xl">Professional Background</h2>
         </div>
         
-        <Tabs.Root value="work">
+        <Tabs.Root value="school">
         <Tabs.List class="text-muted-foreground w-full justify-start rounded-none bg-transparent p-0">
             <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work Experience</Tabs.Trigger>
             <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic Experience</Tabs.Trigger>
@@ -162,21 +162,21 @@
             </Tabs.Content>
             <Tabs.Content value="school">
             <div class="flex flex-col gap-4 mt-5">
-                <div class="border-l border-slate-600 pl-4">
-                    <div class="inline-flex whitespace-nowrap w-80 mb-2">
-                        <span class="overflow-auto text-xs font-semibold">Academic Achievements</span>
+                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                        <span class="overflow-auto text-xs font-semibold sm:w-28">Academic Achievements</span>
                     </div>
-                    <ol class="flex flex-col gap-4">
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
                         <AcademicExperience title="B.S. in Computer Science, achieved in 2023" 
                             descriptions={["Graduated with with great distinction (Magna cum laude)", 
                                 "Conferred by Saint Louis University (Baguio City, PH)"]}/>
                     </ol>
                 </div>
-                <div class="border-l border-slate-600 pl-4">
-                    <div class="inline-flex whitespace-nowrap w-80 mb-2">
-                        <span class="overflow-auto text-xs font-semibold">Research Work</span>
+                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                        <span class="overflow-auto text-xs font-semibold sm:w-28">Research Work</span>
                     </div>
-                    <ol class="flex flex-col gap-4">
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
                         <AcademicExperience 
                             title="Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)" 
                             descriptions={["Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.”",
