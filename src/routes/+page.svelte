@@ -16,15 +16,15 @@
 
 <!-- <div class="bg-slate-950 sm:bg-slate-800 md:bg-slate-500 lg:bg-slate-200 xl:bg-slate-50 h-[5px]"></div> -->
 
-<div class="h-screen px-12">
+<div class="h-screen">
 
-    <header class="flex h-screen items-center">
+    <header class="flex h-screen px-12 items-center text-slate-900 ">
         <div class="flex flex-col justify-between min-h-content gap-20">
             <div>
                 <div class="flex mb-2 gap-2">
-                    <Badge variant="secondary" class="flex gap-2 w-fit">
+                    <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit">
                         <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
-                        <span>Ready to Connect</span>
+                        <span class="font-bold">Ready to Connect</span>
                     </Badge>
                     <div class="flex gap-0.5 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -121,7 +121,7 @@
         </div>
     </header>
 
-    <section id="experience" class="mb-16 ">
+    <section id="experience" class="flex flex-col mb-16 px-12">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Professional Background</h2>
         </div>
@@ -162,9 +162,9 @@
             </Tabs.Content>
             <Tabs.Content value="school">
             <div class="flex flex-col gap-4 mt-5">
-                <div class="border-l pl-4">
+                <div class="border-l border-slate-600 pl-4">
                     <div class="inline-flex whitespace-nowrap w-80 mb-2">
-                        <span class="overflow-auto text-xs">Academic Achievements</span>
+                        <span class="overflow-auto text-xs font-semibold">Academic Achievements</span>
                     </div>
                     <ol class="flex flex-col gap-4">
                         <AcademicExperience title="B.S. in Computer Science, achieved in 2023" 
@@ -172,9 +172,9 @@
                                 "Conferred by Saint Louis University (Baguio City, PH)"]}/>
                     </ol>
                 </div>
-                <div class="border-l pl-4">
+                <div class="border-l border-slate-600 pl-4">
                     <div class="inline-flex whitespace-nowrap w-80 mb-2">
-                        <span class="overflow-auto text-xs">Research Work</span>
+                        <span class="overflow-auto text-xs font-semibold">Research Work</span>
                     </div>
                     <ol class="flex flex-col gap-4">
                         <AcademicExperience 
@@ -199,7 +199,7 @@
 
     </section>
 
-    <section id="projects" class="mb-16">
+    <section id="projects" class="flex flex-col mb-16 px-12">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
@@ -227,7 +227,7 @@
         </div>
     </section>
 
-    <section id="Writing" class="pb-16 ">
+    <section id="writing" class="flex flex-col mb-16 px-12">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Writing</h2>
         </div>

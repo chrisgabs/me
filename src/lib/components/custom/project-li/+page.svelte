@@ -9,13 +9,13 @@
 </script>
 
 <li>
-    <div class="flex flex-col gap-1 p-4 bg-gradient-to-b from-stone-100 border-b-2 border-r-2 border-slate-200">
+    <div class="flex flex-col gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700">
         <h3 class="mb-3">
-            <span class="inline-flex font-semibold text-lg">
+            <span class="inline-flex font-bold text-lg">
                 {title}
             </span>
         </h3>
-        <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 outline outline-1 rounded-sm outline-slate-200">
+        <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border-2 border-slate-700">
             <img src="{image}" alt={title} class="object-cover w-full h-full"/>
         </div>
         <ul class="flex gap-2 mb-3">
