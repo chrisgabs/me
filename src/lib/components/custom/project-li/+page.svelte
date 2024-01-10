@@ -20,7 +20,7 @@
         </div>
         <ul class="flex gap-2 mb-3">
             {#each techBadges as badge}
-                    <li><Badge variant="secondary">{badge}</Badge></li>
+                    <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
             {/each}
         </ul>
         <p class="leading-relaxed mb-2 text-sm tracking-wide">{description}</p>

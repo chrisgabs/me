@@ -22,7 +22,7 @@
         <div class="flex flex-col justify-between min-h-content gap-20">
             <div>
                 <div class="flex mb-2 gap-2">
-                    <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit">
+                    <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit neo-badge">
                         <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
                         <span class="font-bold">Ready to Connect</span>
                     </Badge>

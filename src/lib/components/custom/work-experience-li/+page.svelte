@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Badge } from "$lib/components/ui/badge";
-    
+
     export let datePeriod:string = "date period";
     export let workTitle:string  = "work title";
     export let company:string  = "company";
@@ -31,7 +31,7 @@
             <ul class="flex gap-2">
                 {#if techBadges !== null}
                     {#each techBadges as badge}
-                        <li><Badge variant="secondary">{badge}</Badge></li>
+                        <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
                     {/each}
                 {/if}
             </ul>

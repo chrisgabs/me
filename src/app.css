@@ -81,3 +81,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Classes */
+
+.neo-badge {
+    @apply border-b-2 border-slate-700 bg-inherit;
+}
