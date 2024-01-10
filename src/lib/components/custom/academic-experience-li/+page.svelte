@@ -7,7 +7,7 @@
     <div class="flex flex-col gap-3">
         <div>
             <h3 class="mb-2">
-                <span class="inline-flex items-center gap-1 font-bold text-lg leading-normal sm:text-xl max-w-md">
+                <span class="inline-flex items-center gap-1 font-bold text-lg leading-normal sm:text-xl max-w-md md:text-lg">
                     {title}
                 </span>
             </h3>

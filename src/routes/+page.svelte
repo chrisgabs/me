@@ -7,6 +7,7 @@
     import AcademicExperience from "$lib/components/custom/academic-experience-li/+page.svelte";
     import Project from "$lib/components/custom/project-li/+page.svelte";
     import tictactoeImage from '$lib/assets/tictactoes.png';
+    import gradientImage from '$lib/assets/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
     import bidImage from '$lib/assets/bird.jpg';
     import samplePicture from '$lib/assets/sample.png';
@@ -14,13 +15,14 @@
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
 </script>
 
-<div class="sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-slate-200 xl:bg-slate-50 w-full h-[5px]"></div>
+<div class="hidden lg:block lg:sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-yellow-200 xl:bg-slate-50 w-full h-[5px]"></div>
 
-<div class="flex flex-col w-fit sm:max-w-2xl sm:mx-auto">
+<div class="flex flex-col w-fit sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0">
 
-    <header class="flex h-screen px-12 items-center text-slate-900">
-        <div class="flex flex-col justify-between min-h-content gap-20">
-            <div>
+    <header class="flex h-screen w-full px-12 items-center text-slate-900 md:pr-3 md:pl-auto md:w-fit">
+        <div class="flex flex-col justify-between min-h-content gap-20 md:py-28 md:gap-0 md:h-full md:min-w-80">
+            <div class="flex flex-col gap-20">
+            <div id="about">
                 <div class="flex mb-2 gap-2">
                     <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit neo-badge">
                         <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
@@ -31,7 +33,7 @@
                         <span class="font-semibold">PH</span>
                     </div>
                 </div>
-                <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Christian Bayquen</h1>
+                <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl">Christian Bayquen</h1>
                 <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Applications Engineer at Oracle</h2>
                 <p class="mt-8 max-w-xs leading-normal">I love automation, problem solving, and building meaningful applications with:</p>
                 <ul class="flex mt-5 gap-4">
@@ -92,6 +94,7 @@
                     </div>
                 </li>
             </ul>
+            </div>
     
             <div>
                 <ul class="flex items-center mt-4 gap-5">
@@ -121,12 +124,14 @@
         </div>
     </header>
 
-    <section id="experience" class="flex flex-col mb-16 px-12">
+    <!-- Content -->
+    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-auto no-scrollbar px-12 md:pt-24 md:pl-4 md:mx-0 md:min">
+    <section id="experience" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Professional Background</h2>
         </div>
         
-        <Tabs.Root value="school">
+        <Tabs.Root value="work">
         <Tabs.List class="text-muted-foreground w-full justify-start rounded-none bg-transparent p-0">
             <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work Experience</Tabs.Trigger>
             <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic Experience</Tabs.Trigger>
@@ -199,7 +204,7 @@
 
     </section>
 
-    <section id="projects" class="flex flex-col mb-16 px-12">
+    <section id="projects" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
@@ -207,19 +212,19 @@
             <ol class="flex flex-col gap-6">
                 <Project
                     title="Tictactoe 2"
-                    image={bidImage}
+                    image={gradientImage}
                     description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
                     techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
                 />
                 <Project
                     title="Tictactoe 2"
-                    image={bidImage}
+                    image={gradientImage}
                     description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
                     techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
                 />
                 <Project
                     title="Tictactoe 2"
-                    image={bidImage}
+                    image={gradientImage}
                     description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
                     techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
                 />
@@ -227,11 +232,12 @@
         </div>
     </section>
 
-    <section id="writing" class="flex flex-col mb-16 px-12">
+    <section id="writing" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Writing</h2>
         </div>
         <span>Coming soon!</span>
     </section>
+    </div>
 
 </div>
