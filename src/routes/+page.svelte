@@ -17,9 +17,9 @@
 
 <div class="hidden lg:block lg:sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-yellow-200 xl:bg-slate-50 w-full h-[5px]"></div>
 
-<div class="flex flex-col w-fit sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0">
+<div class="flex flex-col w-fit px-12 sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between">
 
-    <header class="flex h-screen w-full px-12 items-center text-slate-900 md:pr-3 md:pl-auto md:w-fit">
+    <header class="flex h-screen w-full items-center text-slate-900 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:py-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="about">
@@ -125,7 +125,7 @@
     </header>
 
     <!-- Content -->
-    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-auto no-scrollbar px-12 md:pt-24 md:pl-4 md:mx-0 md:min">
+    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-y-auto no-scrollbar md:pt-24 md:pl-4 md:mx-0 md:min">
     <section id="experience" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Professional Background</h2>
@@ -203,13 +203,14 @@
         </Tabs.Root>
 
     </section>
-
+    
     <section id="projects" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
         <div>
-            <ol class="flex flex-col gap-6">
+            <!-- <ol class="section-with-scrollbar flex flex-col gap-6 lg:flex-row lg:overflow-hidden lg:snap-x lg:pb-2 lg:hover:overflow-x-auto"> -->
+            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap ">
                 <Project
                     title="Tictactoe 2"
                     image={gradientImage}

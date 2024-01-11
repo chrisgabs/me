@@ -102,4 +102,23 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  .section-with-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    /* Adjust the width as needed */
+  }
+
+  .section-with-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+    /* Track color */
+  }
+
+  .section-with-scrollbar::-webkit-scrollbar-thumb {
+    /* color */
+    @apply bg-slate-800;
+    /* Rounded corners for the thumb */
+    @apply rounded-sm
+  }
+
+  
 }

@@ -27,7 +27,7 @@
                     </span>
                 </span>
             </h3>
-            <p class="leading-relaxed mb-2 text-sm tracking-wide max-w-sm">{description}</p>
+            <p class="leading-relaxed mb-2 text-sm tracking-wide max-w-lg text-justify">{description}</p>
             <ul class="flex gap-2">
                 {#if techBadges !== null}
                     {#each techBadges as badge}
