@@ -9,22 +9,25 @@
 </script>
 
 <li>
-    <div class="flex flex-col gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl lg:max-w-xs lg:snap-center">
+    <div class="flex flex-col justify-between p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl md:min-h-[28rem] lg:max-w-xs lg:snap-center" >
     <!-- <div class="flex flex-col gap-1 p-4 border shadow-md max-w-xl lg:max-w-xs lg:snap-center"> -->
-        <h3 class="mb-3">
-            <span class="inline-flex font-bold text-lg">
-                {title}
-            </span>
-        </h3>
-        <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border border-slate-700">
-            <img src="{image}" alt={title} class="object-cover w-full h-full"/>
+        <div class="flex flex-col gap-1">
+            <h3 class="mb-3">
+                <span class="inline-flex font-bold text-lg">
+                    {title}
+                </span>
+            </h3>
+            <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border border-slate-700">
+                <img src="{image}" alt={title} class="object-cover w-full h-full"/>
+            </div>
+            <ul class="flex gap-2 mb-3">
+                {#each techBadges as badge}
+                        <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
+                {/each}
+            </ul>
+            <p class="leading-relaxed mb-2 text-sm tracking-wide">{description}</p>
         </div>
-        <ul class="flex gap-2 mb-3">
-            {#each techBadges as badge}
-                    <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
-            {/each}
-        </ul>
-        <p class="leading-relaxed mb-2 text-sm tracking-wide">{description}</p>
+
         <div class="flex gap-3">
             <button class="">
                 <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">

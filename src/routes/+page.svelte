@@ -6,6 +6,7 @@
     import WorkExperience from "$lib/components/custom/work-experience-li/+page.svelte";
     import AcademicExperience from "$lib/components/custom/academic-experience-li/+page.svelte";
     import Project from "$lib/components/custom/project-li/+page.svelte";
+    import ProjectViewMore from "$lib/components/custom/project-li-more/+page.svelte";
     import tictactoeImage from '$lib/assets/tictactoes.png';
     import gradientImage from '$lib/assets/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
@@ -15,12 +16,12 @@
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
 </script>
 
-<div class="hidden lg:block lg:sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-yellow-200 xl:bg-slate-50 w-full h-[5px]"></div>
+<div class="hidden xl:hidden lg:block lg:sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-yellow-200 xl:bg-slate-50 w-full h-[5px]"></div>
 
-<div class="flex flex-col w-fit px-12 sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between">
+<div class="flex flex-col w-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
 
-    <header class="flex h-screen w-full items-center text-slate-900 md:pl-auto md:w-fit">
-        <div class="flex flex-col justify-between min-h-content gap-20 md:py-28 md:gap-0 md:h-full md:min-w-80">
+    <header class="flex h-screen w-full items-center text-slate-900 md:pt-24 md:pl-auto md:w-fit">
+        <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="about">
                 <div class="flex mb-2 gap-2">
@@ -72,7 +73,7 @@
                 </ul>
             </div>
     
-            <ul class="flex flex-col gap-2">
+            <ul class="flex flex-col gap-2 mb-14">
                 <li>
                     <div class="flex flex-row gap-2 items-center">
                         <div class="h-4 w-3 bg-slate-800"/><p class="font-bold">About</p>
@@ -125,7 +126,7 @@
     </header>
 
     <!-- Content -->
-    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-y-auto no-scrollbar md:pt-24 md:pl-4 md:mx-0 md:min">
+    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-y-auto no-scrollbar md:pt-24 md:mx-0 md:min lg:max-w-[42rem]">
     <section id="experience" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Professional Background</h2>
@@ -210,7 +211,7 @@
         </div>
         <div>
             <!-- <ol class="section-with-scrollbar flex flex-col gap-6 lg:flex-row lg:overflow-hidden lg:snap-x lg:pb-2 lg:hover:overflow-x-auto"> -->
-            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap ">
+            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap lg:items-center">
                 <Project
                     title="Tictactoe 2"
                     image={gradientImage}
@@ -220,15 +221,16 @@
                 <Project
                     title="Tictactoe 2"
                     image={gradientImage}
-                    description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
+                    description="Developed in Golang and  for up to four players feature enables drag their pieces during gameplay, facilitated through WebSocket technology."
                     techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
                 />
                 <Project
                     title="Tictactoe 2"
                     image={gradientImage}
-                    description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
+                    description="Developed in Golang and deployed on AWS, offers a  to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
                     techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
                 />
+                <ProjectViewMore/>
             </ol>
         </div>
     </section>
