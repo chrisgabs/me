@@ -127,6 +127,18 @@
 
     <!-- Content -->
     <div id="content" class="flex flex-col w-full md:max-h-screen overflow-y-auto no-scrollbar md:pt-24 md:mx-0 md:min lg:max-w-[42rem]">
+
+    <section id="about" class="flex flex-col mb-16">
+        <div class="mb-7 w-full">
+            <h2 class="font-bold text-2xl">About Me</h2>
+        </div>
+        <div>
+            <p class="mb-4">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
+            <p class="mb-4">Since printing out my first Hello World in the command line, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
+            <p class="mb-4">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
+        </div>
+    </section>
+
     <section id="experience" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Professional Background</h2>
