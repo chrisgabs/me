@@ -16,11 +16,11 @@
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
 </script>
 
-<div class="hidden xl:hidden lg:block lg:sticky left-0 top-0 bg-slate-950 sm:bg-blue-500 md:bg-slate-500 lg:bg-yellow-200 xl:bg-slate-50 w-full h-[5px]"></div>
+<!-- <div class="hidden xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 md:bg-yellow-500 md:bg-slate-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div> -->
 
-<div class="flex flex-col w-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
+<div class="flex flex-col w-fit h-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
 
-    <header class="flex h-screen w-full items-center text-slate-900 md:pt-24 md:pl-auto md:w-fit">
+    <header class="flex h-screen w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="about">
@@ -126,7 +126,7 @@
     </header>
 
     <!-- Content -->
-    <div id="content" class="flex flex-col w-full md:max-h-screen overflow-y-auto no-scrollbar md:pt-24 md:mx-0 md:min lg:max-w-[42rem]">
+    <div id="content" class="flex flex-col w-full md:pt-24 md:mx-0 md:min lg:max-w-[42rem]">
 
     <section id="about" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
