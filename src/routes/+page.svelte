@@ -12,23 +12,70 @@
     import { Separator } from "$lib/components/ui/separator";
     import bidImage from '$lib/assets/bird.jpg';
     import samplePicture from '$lib/assets/sample.png';
+    import { onMount } from "svelte";
+
 
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
+    
+    let previouslySelectedElement:HTMLElement|null = null;
+    let aboutSectionY:number|null = null;
+    let workSectionY:number|null = null;
+    let projectsSectionY:number|null = null;
+    let writingSectionY:number|null = null;
 
-    let previouslySelected:HTMLElement|null = null;
+    onMount(async() => {
+        aboutSectionY = document.getElementById("about")?.getBoundingClientRect().y!;
+        workSectionY = document.getElementById("experience")?.getBoundingClientRect().y!;
+        projectsSectionY = document.getElementById("projects")?.getBoundingClientRect().y!;
+        writingSectionY = document.getElementById("writing")?.getBoundingClientRect().y!;
+
+        document.addEventListener("scroll", () => {
+            updateSelectedMenuItem();
+        });
+
+        window.addEventListener("resize", (e) => {
+            updateSelectedMenuItem();
+        })
+
+        updateSelectedMenuItem();
+    });
+
+    function updateSelectedMenuItem() {
+        aboutSectionY = document.getElementById("about")?.getBoundingClientRect().y!;
+        workSectionY = document.getElementById("experience")?.getBoundingClientRect().y!;
+        projectsSectionY = document.getElementById("projects")?.getBoundingClientRect().y!;
+        writingSectionY = document.getElementById("writing")?.getBoundingClientRect().y!;
+
+        const oneThirdsOfScreen:number = window.innerHeight/3;
+        let currentlySelectedElement:HTMLElement|null = null;
+
+        if (aboutSectionY < oneThirdsOfScreen) {
+            currentlySelectedElement = document.getElementById("aboutMenuItem");
+        }
+        if (workSectionY < oneThirdsOfScreen) {
+            currentlySelectedElement = document.getElementById("experienceMenuItem");
+        }
+        if (projectsSectionY < oneThirdsOfScreen) {
+            currentlySelectedElement = document.getElementById("projectsMenuItem");
+        }
+        if (writingSectionY < window.innerHeight - (window.innerHeight*0.10)) {
+            currentlySelectedElement = document.getElementById("writingMenuItem");
+        }
+
+        if (currentlySelectedElement !== null) {
+            highlightSelectedSection(previouslySelectedElement, currentlySelectedElement);
+            previouslySelectedElement = currentlySelectedElement;
+        }
+    }
+
 
     function scrollToSection(target:MouseEvent, section:string) {
         const elementCoords:DOMRect|undefined = document.getElementById(section)?.getBoundingClientRect();
-    
+
         if (target.currentTarget instanceof HTMLButtonElement) {
             const childElement = target.currentTarget.children[0] as HTMLElement;
-            if (previouslySelected !== null) {
-                previouslySelected.classList.remove("w-3");
-                previouslySelected.classList.add("w-px");
-            }
-            childElement.classList.remove("w-px");
-            childElement.classList.add("w-3");
-            previouslySelected = childElement;
+            highlightSelectedSection(previouslySelectedElement as HTMLElement, childElement);
+            previouslySelectedElement = childElement;
         }
 
         if (elementCoords) {
@@ -40,6 +87,15 @@
                 behavior: "smooth",
             });
         }
+    }
+
+    function highlightSelectedSection(previouslySelected:HTMLElement|null, currentlySelected:HTMLElement) {
+        if (previouslySelected !== null) {
+            previouslySelected.classList.remove("w-3");
+            previouslySelected.classList.add("w-px");
+        }
+        currentlySelected.classList.remove("w-px");
+        currentlySelected.classList.add("w-3");
     }
 
 </script>
@@ -105,22 +161,22 @@
             <ul class="flex flex-col gap-2 mb-14">
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "about")}>
-                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">About</p>
+                        <div id="aboutMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">About</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "experience")}>
-                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Work</p>
+                        <div id="experienceMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Work</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "projects")}>
-                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Projects</p>
+                        <div id="projectsMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Projects</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "writing")}>
-                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Writing</p>
+                        <div id="writingMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Writing</p>
                     </button>
                 </li>
             </ul>
@@ -162,7 +218,7 @@
             <h2 class="font-bold text-2xl">About Me</h2>
         </div>
         <div class="block">
-            <figure class="float-right mb-1 ml-5 mt-2 lg:ml-6 ">
+            <figure class="float-right mb-1 ml-5 mt-1 lg:ml-6 ">
                 <img src="{gradientImage}" alt={"pfp"} class="border border-slate-700 h-40 w-40"/>
             </figure>
             <p class="mb-4 text-justify">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
