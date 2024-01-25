@@ -17,9 +17,9 @@
                     {title}
                 </span>
             </h3>
-            <div class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border border-slate-700">
+            <figure class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border border-slate-700">
                 <img src="{image}" alt={title} class="object-cover w-full h-full"/>
-            </div>
+            </figure>
             <ul class="flex gap-2 mb-3">
                 {#each techBadges as badge}
                         <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>

@@ -14,6 +14,34 @@
     import samplePicture from '$lib/assets/sample.png';
 
     const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
+
+    let previouslySelected:HTMLElement|null = null;
+
+    function scrollToSection(target:MouseEvent, section:string) {
+        const elementCoords:DOMRect|undefined = document.getElementById(section)?.getBoundingClientRect();
+    
+        if (target.currentTarget instanceof HTMLButtonElement) {
+            const childElement = target.currentTarget.children[0] as HTMLElement;
+            if (previouslySelected !== null) {
+                previouslySelected.classList.remove("w-3");
+                previouslySelected.classList.add("w-px");
+            }
+            childElement.classList.remove("w-px");
+            childElement.classList.add("w-3");
+            previouslySelected = childElement;
+        }
+
+        if (elementCoords) {
+            let offset:number = -96; // in pixels (margin top)
+
+            window.scrollBy({
+                top: elementCoords.y + offset,
+                left: 0,
+                behavior: "smooth",
+            });
+        }
+    }
+
 </script>
 
 <!-- <div class="hidden xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 md:bg-yellow-500 md:bg-slate-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div> -->
@@ -23,7 +51,7 @@
     <header class="flex h-screen w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
-            <div id="about">
+            <div id="heading">
                 <div class="flex mb-2 gap-2">
                     <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit neo-badge">
                         <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
@@ -34,6 +62,7 @@
                         <span class="font-semibold">PH</span>
                     </div>
                 </div>
+                <!-- <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl"><ruby>Christian <rp>(</rp><rt>sdfasdfklj</rt><rp>)</rp>Bayquen</ruby></h1> -->
                 <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl">Christian Bayquen</h1>
                 <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Applications Engineer at Oracle</h2>
                 <p class="mt-8 max-w-xs leading-normal">I love automation, problem solving, and building meaningful applications with:</p>
@@ -74,25 +103,25 @@
             </div>
     
             <ul class="flex flex-col gap-2 mb-14">
-                <li>
-                    <div class="flex flex-row gap-2 items-center">
-                        <div class="h-4 w-3 bg-slate-800"/><p class="font-bold">About</p>
-                    </div>
+                <li class="group">
+                    <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "about")}>
+                        <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">About</p>
+                    </button>
                 </li>
-                <li>
-                    <div class="group delay-150 flex flex-row gap-2 items-center ">
+                <li class="group">
+                    <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "experience")}>
                         <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Work</p>
-                    </div>
+                    </button>
                 </li>
-                <li>
-                    <div class="group delay-150 flex flex-row gap-2 items-center ">
+                <li class="group">
+                    <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "projects")}>
                         <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Projects</p>
-                    </div>
+                    </button>
                 </li>
-                <li>
-                    <div class="group flex flex-row gap-2 items-center ">
+                <li class="group">
+                    <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "writing")}>
                         <div class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Writing</p>
-                    </div>
+                    </button>
                 </li>
             </ul>
             </div>
@@ -132,10 +161,13 @@
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">About Me</h2>
         </div>
-        <div>
-            <p class="mb-4">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
-            <p class="mb-4">Since printing out my first Hello World in the command line, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
-            <p class="mb-4">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
+        <div class="block">
+            <figure class="float-right mb-1 ml-5 mt-2 lg:ml-6 ">
+                <img src="{gradientImage}" alt={"pfp"} class="border border-slate-700 h-40 w-40"/>
+            </figure>
+            <p class="mb-4 text-justify">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
+            <p class="mb-4 text-justify">Since printing out my first Hello World in the command line, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
+            <p class="mb-4 text-justify">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
         </div>
     </section>
 
