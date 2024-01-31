@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <Button variant="outline" class="flex flex-col z-50 rounded-none gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700 lg:w-80 lg:h-52 lg:mt-6">
+    <Button variant="outline" href="/projects" class="flex flex-col z-50 rounded-none gap-1 p-4 border-l border-t border-b-4 border-r-4 border-slate-700 lg:w-80 lg:h-52 lg:mt-6">
         Check Out My Other Projects!
         <span class="hidden lg:block font-normal">[12] Projects</span>
     </Button>
