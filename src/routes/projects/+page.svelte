@@ -3,6 +3,8 @@
     import gradientImage from '$lib/assets/gradient.jpg';
     import ProjectLarge from '$lib/components/custom/project-large/+page.svelte';
     import ProjectSmall from '$lib/components/custom/project-small/+page.svelte';
+    import * as Collapsible from "$lib/components/ui/collapsible";
+
 </script>
 
 <div class="xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 sm:bg-slate-500 md:bg-yellow-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div>
@@ -20,9 +22,10 @@
     </header>
 
     <content class="flex flex-col gap-4 w-full pb-12">
-        
+    
+
         <!-- TODO: Turn this into an accordion -->
-        <ProjectLarge techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
+        <!-- <ProjectLarge techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/> -->
         <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
         <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
         <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
