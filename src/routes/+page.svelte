@@ -33,7 +33,7 @@
             updateSelectedMenuItem();
         });
 
-        window.addEventListener("resize", (e) => {
+        window.addEventListener("resize", () => {
             updateSelectedMenuItem();
         })
 

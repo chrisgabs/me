@@ -21,9 +21,19 @@
 </ul> -->
 <Collapsible.Root class="w-full h-fit border border-r-4 border-slate-700" bind:open={collapsibleOpen}>
     <Collapsible.Trigger class="flex justify-between items-center w-full p-4">
-        <div>
-            <h3 class="text-lg font-bold text-start">TicTacToe 2</h3>
-            <p class="text-sm leading-relaxed tracking-wide">Play with your friends</p>
+        <div class="flex flex-col gap-2 text-start">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 lg:w-full">
+                <h3 class="text-lg font-bold text-start">TicTacToe 2</h3>
+                <p class="text-sm leading-relaxed tracking-wide">Play with your friends</p>
+            </div>
+            {#if !collapsibleOpen}
+            <ul class="hidden lg:flex gap-2 group-hover:mb-2">
+                {#each techBadges as badge}
+                <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{badge}</Badge></li>
+                <!-- <li class="text-xs font-semibold">{badge} |</li> -->
+                {/each}
+            </ul>
+            {/if}
         </div>
 		<ChevronDown class="h-6 w-6 transition-transform duration-300 {chevronRotation}" />
     </Collapsible.Trigger>
