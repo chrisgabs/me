@@ -3,9 +3,13 @@
     import { Badge } from "$lib/components/ui/badge";
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { ChevronDown } from "lucide-svelte";
+    import { onMount } from 'svelte';
     
     export let techBadges:string[] = [];
+    export let allCollapsibleOpen:boolean = false;
     let collapsibleOpen:boolean = false;
+    
+    $: collapsibleOpen = allCollapsibleOpen;
     $: chevronRotation = collapsibleOpen ? "rotate-180" : "rotate-0";
 
 </script>
@@ -33,7 +37,7 @@
                     <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
             {/each}
         </ul>
-        
+
         <p class="text-sm leading-relaxed tracking-wide">Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.</p>
 
         <div class="flex gap-3">

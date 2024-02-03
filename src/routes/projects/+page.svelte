@@ -4,7 +4,12 @@
     import ProjectLarge from '$lib/components/custom/project-large/+page.svelte';
     import ProjectSmall from '$lib/components/custom/project-small/+page.svelte';
     import * as Collapsible from "$lib/components/ui/collapsible";
+    import { Separator } from "$lib/components/ui/separator";
+    import { Checkbox } from "$lib/components/ui/checkbox";
+    import { Label } from "$lib/components/ui/label";
 
+    let checked = false;
+    let expanded:boolean = false;
 </script>
 
 <div class="xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 sm:bg-slate-500 md:bg-yellow-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div>
@@ -21,14 +26,114 @@
         <p class="mt-3 max-w-xs leading-normal">Here are some of the projects I've been working on since I've learned how to code.</p>
     </header>
 
-    <content class="flex flex-col gap-4 w-full pb-12">
-    
+    <Collapsible.Root open={false} id="filters" class="w-full mb-6">
+        <div id="controls" class="flex justify-between">
+            <Collapsible.Trigger class="inline-flex items-center justify-center text-sm font-medium whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 rounded-none border-l border-t border-b-4 border-r-4 border-slate-700">
+                Filters
+            </Collapsible.Trigger>
+            <Button variant="outline" class="rounded-none border-l border-t border-b-4 border-r-4 border-slate-700"
+                on:click={() => expanded = !expanded}
+            >
+                {#if expanded} Collapse All Projects {:else} Expand All Projects {/if}
+            </Button>
+        </div>
+
+        <Collapsible.Content class="flex flex-col gap-4 mt-4">
+            <div class="flex flex-col gap-2 px-1">
+                <h3 class="font-bold text-sm">Languages</h3>
+                <div class="flex gap-4">
+                    <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        Java
+                    </Label>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        Golang
+                    </Label>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        Javascript
+                    </Label>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 px-1">
+                <h3 class="font-bold text-sm">Technology</h3>
+                <div class="flex gap-4">
+                    <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        SvelteKit
+                    </Label>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        AWS
+                    </Label>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex items-center space-x-2">
+                    <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
+                    <Label
+                        id="terms-label"
+                        for="terms"
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        DevOps
+                    </Label>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </Collapsible.Content>
+    </Collapsible.Root>
+
+    <Separator class="mb-6"/>
+
+    <content class="flex flex-col gap-6 w-full pb-12">
 
         <!-- TODO: Turn this into an accordion -->
         <!-- <ProjectLarge techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/> -->
-        <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-        <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-        <ProjectSmall techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
+        <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
+        <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
+        <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
     </content>
 
 </div>
