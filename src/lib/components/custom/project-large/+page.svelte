@@ -1,5 +1,5 @@
 <script lang="ts">
-    import gradientImage from '$lib/assets/gradient.jpg';
+    import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Badge } from "$lib/components/ui/badge";
     
     export let techBadges:string[] = [];

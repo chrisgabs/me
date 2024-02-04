@@ -10,7 +10,6 @@
     import tictactoeImage from '$lib/assets/tictactoes.png';
     import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
-    import bidImage from '$lib/assets/bird.jpg';
     import samplePicture from '$lib/assets/sample.png';
     import { onMount } from "svelte";
 
