@@ -1,20 +1,53 @@
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
-    import gradientImage from '$lib/assets/gradient.jpg';
-    import ProjectLarge from '$lib/components/custom/project-large/+page.svelte';
     import ProjectSmall from '$lib/components/custom/project-small/+page.svelte';
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { Separator } from "$lib/components/ui/separator";
-    import { Checkbox } from "$lib/components/ui/checkbox";
-    import { Label } from "$lib/components/ui/label";
     import { onMount } from "svelte";
+    import projectsArchive from "$lib/content/projects-archive/data.json";
+    import FilterOption from "$lib/components/custom/utility/checkbox.svelte";
 
-    let checked:boolean = false;
     let expanded:boolean = false;
     let filtersPermanentlyOpen:boolean = false;
     let filterIsOpen:boolean = false;
 
+    let filters:{[key: string]: boolean} = {};
+
+    $: {
+        let enabledTags:string[] = [];
+
+        for (const key in filters) {
+            if (filters[key]) {
+                enabledTags.push(key);
+            }
+        }
+
+        if (enabledTags.length > 0) {
+            projectsArchive["data"].forEach((project) => {
+                project["visible"] = false;
+                enabledTags.forEach((tag) => {
+                    if (project["tags"].includes(tag)) {
+                        project["visible"] = true;
+                    }
+                })
+            })
+        }else {
+            projectsArchive["data"].forEach((project) => {
+                project["visible"] = true;
+            })
+        }
+
+        projectsArchive["data"] = projectsArchive["data"];
+    }
+
     onMount(() => {
+        projectsArchive["constants"]["languages"].forEach((lang) => {
+            filters[lang] = false;
+        })
+        projectsArchive["constants"]["tags"].forEach((lang) => {
+            filters[lang] = false;
+        })
+        
         updateFilterState();
         window.addEventListener("resize", ()=> {
             updateFilterState();
@@ -64,88 +97,22 @@
                 </Button>
             </div>
     
-            <Collapsible.Content class="flex flex-col gap-4 px-1 md:pt-2">
+            <Collapsible.Content class="flex flex-col gap-4 px-1 md:pt-2 md:max-w-48">
                 <div class="flex flex-col gap-2">
                     <h3 class="font-bold text-sm">Languages</h3>
                     <div class="flex gap-4 flex-wrap">
-                        <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            Java
-                        </Label>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            Golang
-                        </Label>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            Javascript
-                        </Label>
-                        </div>
-                    </div>
+                        {#each projectsArchive["constants"]["languages"] as language (language)}
+                            <FilterOption bind:checked={filters[language]} label={language}/>
+                        {/each}
                     </div>
                 </div>
     
-                <div class="flex flex-col gap-2 px-1">
+                <div class="flex flex-col gap-2">
                     <h3 class="font-bold text-sm">Tags</h3>
                     <div class="flex gap-4 flex-wrap">
-                        <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            SvelteKit
-                        </Label>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            AWS
-                        </Label>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="flex items-center space-x-2">
-                        <Checkbox id="terms" bind:checked aria-labelledby="terms-label" class="rounded-none" />
-                        <Label
-                            id="terms-label"
-                            for="terms"
-                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            DevOps
-                        </Label>
-                        </div>
-                    </div>
+                        {#each projectsArchive["constants"]["tags"] as tag (tag)}
+                            <FilterOption bind:checked={filters[tag]} label={tag}/>
+                        {/each}
                     </div>
                 </div>
             </Collapsible.Content>
@@ -163,17 +130,22 @@
         <Separator orientation="horizontal" class="md:hidden"/>
         <Separator orientation="vertical" class="hidden md:flex h-96"/>
     
-        <content class="flex grow flex-col gap-6 pb-12 w-full md:w-[32rem] lg:w-[36rem]">
+        <content class="flex grow flex-col gap-6 pb-12 w-full md:w-[32rem] lg:w-[36rem] transition-all">
     
             <!-- TODO: Turn this into an accordion -->
-            <!-- <ProjectLarge techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/> -->
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
-            <ProjectSmall bind:allCollapsibleOpen={expanded} techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}/>
+            {#each projectsArchive["data"] as project (project["title"])}
+                {#if project["visible"]}
+                    <ProjectSmall 
+                        bind:allCollapsibleOpen={expanded} 
+                        title={project["title"]} 
+                        shortDescription={project["shortDescription"]}
+                        longDescription={project["longDescription"]}
+                        image={project["image"]}
+                        tags={project["tags"]}
+                    />
+                {/if}
+            {/each}
+
         </content>
     </div>
 

@@ -8,7 +8,7 @@
     import Project from "$lib/components/custom/project-li/+page.svelte";
     import ProjectViewMore from "$lib/components/custom/project-li-more/+page.svelte";
     import tictactoeImage from '$lib/assets/tictactoes.png';
-    import gradientImage from '$lib/assets/gradient.jpg';
+    import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
     import bidImage from '$lib/assets/bird.jpg';
     import samplePicture from '$lib/assets/sample.png';
@@ -222,7 +222,7 @@
                 <img src="{gradientImage}" alt={"pfp"} class="border border-slate-700 h-40 w-40"/>
             </figure>
             <p class="mb-4 text-justify">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
-            <p class="mb-4 text-justify">Since printing out my first Hello World in the command line, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
+            <p class="mb-4 text-justify">Since printing out my first Hello World in the command line five years ago, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
             <p class="mb-4 text-justify">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
         </div>
     </section>

@@ -1,11 +1,14 @@
 <script lang="ts">
-    import gradientImage from '$lib/assets/gradient.jpg';
     import { Badge } from "$lib/components/ui/badge";
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { ChevronDown } from "lucide-svelte";
-    import { onMount } from 'svelte';
     
-    export let techBadges:string[] = [];
+    export let title:string = "title";
+    export let image:string = "/";
+    export let shortDescription:string = "short description";
+    export let longDescription:string = "long description";
+    export let tags:string[] = [];
+
     export let allCollapsibleOpen:boolean = false;
     let collapsibleOpen:boolean = false;
     
@@ -15,7 +18,7 @@
 </script>
 
 <!-- <ul class="flex gap-2 group-hover:mb-2">
-    {#each techBadges as badge}
+    {#each tags as badge}
             <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
     {/each}
 </ul> -->
@@ -23,13 +26,13 @@
     <Collapsible.Trigger class="flex justify-between items-center w-full p-4">
         <div class="flex flex-col gap-2 text-start">
             <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 lg:w-full">
-                <h3 class="text-lg font-bold text-start">TicTacToe 2</h3>
-                <p class="text-sm leading-relaxed tracking-wide">Play with your friends</p>
+                <h3 class="text-lg font-bold text-start">{title}</h3>
+                <p class="text-sm leading-relaxed tracking-wide">{shortDescription}</p>
             </div>
             {#if !collapsibleOpen}
             <ul class="hidden lg:flex gap-2 group-hover:mb-2">
-                {#each techBadges as badge}
-                <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{badge}</Badge></li>
+                {#each tags as tag}
+                <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{tag}</Badge></li>
                 <!-- <li class="text-xs font-semibold">{badge} |</li> -->
                 {/each}
             </ul>
@@ -39,16 +42,16 @@
     </Collapsible.Trigger>
     <Collapsible.Content class="flex flex-col gap-4 p-4 pt-0">
         <figure class="aspect-w-3 aspect-h-1 overflow-hidden mb-2 rounded-sm border border-slate-700">
-            <img src="{gradientImage}" alt="asdasd" class="object-cover w-full h-full"/>
+            <img src="{image}" alt="asdasd" class="object-cover w-full h-full"/>
         </figure>
 
         <ul class="flex gap-2 group-hover:mb-2">
-            {#each techBadges as badge}
-                    <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
+            {#each tags as tag}
+                    <li><Badge variant="secondary" class="neo-badge">{tag}</Badge></li>
             {/each}
         </ul>
 
-        <p class="text-sm leading-relaxed tracking-wide">Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.</p>
+        <p class="text-sm leading-relaxed tracking-wide">{longDescription}</p>
 
         <div class="flex gap-3">
             <button class="">
