@@ -3,10 +3,10 @@
     import { Badge } from "$lib/components/ui/badge";
     import { Button } from "$lib/components/ui/button";
     import * as Tabs from "$lib/components/ui/tabs";
-    import WorkExperience from "$lib/components/custom/work-experience-li/+page.svelte";
-    import AcademicExperience from "$lib/components/custom/academic-experience-li/+page.svelte";
-    import Project from "$lib/components/custom/project-li/+page.svelte";
-    import ProjectViewMore from "$lib/components/custom/project-li-more/+page.svelte";
+    import WorkExperience from "$lib/components/work-experience-li/+page.svelte";
+    import AcademicExperience from "$lib/components/academic-experience-li/+page.svelte";
+    import Project from "$lib/components/project-li/+page.svelte";
+    import ProjectViewMore from "$lib/components/project-li-more/+page.svelte";
     import tictactoeImage from '$lib/assets/tictactoes.png';
     import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
@@ -232,9 +232,10 @@
         </div>
         
         <Tabs.Root value="work">
-        <Tabs.List class="text-muted-foreground w-full justify-start rounded-none bg-transparent p-0">
-            <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work Experience</Tabs.Trigger>
-            <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic Experience</Tabs.Trigger>
+        <Tabs.List class="text-muted-foreground justify-start rounded-none bg-transparent p-0">
+            <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work</Tabs.Trigger>
+            <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic</Tabs.Trigger>
+            <Tabs.Trigger value="freelance" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Freelance</Tabs.Trigger>
         </Tabs.List>
             <Tabs.Content value="work">
             <!-- <div class="mt-3 rounded-sm border shadow-sm p-4"> -->
@@ -296,6 +297,20 @@
                             descriptions={["Accepted for presentation at the International Conference in IT Education (ICITE2023).", 
                                 "Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support."]}
                         />
+                    </ol>
+                </div>
+            </div>
+            </Tabs.Content>
+            <Tabs.Content value="freelance">
+            <div class="flex flex-col gap-4 mt-5">
+                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                        <span class="overflow-auto text-xs font-semibold sm:w-28">2023-2023</span>
+                    </div>
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
+                        <AcademicExperience title="Automated Data Extraction and Web Scraping" 
+                            descriptions={["Collaborated with a start-up to construct a database encompassing information on over a hundred thousand companies", 
+                                "Streamlined the data extraction process, seamleassly integrating the acquired information with the client's existing data infrastructure."]}/>
                     </ol>
                 </div>
             </div>

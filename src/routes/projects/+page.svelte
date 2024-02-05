@@ -1,11 +1,11 @@
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
-    import ProjectSmall from '$lib/components/custom/project-small/+page.svelte';
+    import ProjectSmall from '$lib/components/project-small/+page.svelte';
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { Separator } from "$lib/components/ui/separator";
     import { onMount } from "svelte";
     import projectsArchive from "$lib/content/projects-archive/data.json";
-    import FilterOption from "$lib/components/custom/utility/checkbox.svelte";
+    import FilterOption from "$lib/components/utility/checkbox.svelte";
 
     let expanded:boolean = false;
     let filtersPermanentlyOpen:boolean = false;

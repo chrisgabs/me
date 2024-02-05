@@ -88,8 +88,14 @@
     @apply border-b-2 border-slate-700 bg-inherit;
 }
 
-@layer utilities {
 
+@layer utilities {
+  
+  .link:after {
+    @apply content-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==')];
+    @apply ml-2;
+    /* You can adjust the margin values as needed */
+  }
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;

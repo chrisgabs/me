@@ -14,7 +14,7 @@
                 "DevOps",
                 "AWS"
             ],
-            "image": "/src/lib/assets/project-images/gradient.jpg",
+            "image": "/project-images/gradient.jpg",
             "githubLink": "/",
             "liveLink": "/",
             "visible": true
@@ -24,7 +24,7 @@
           "shortDescription": "short description",
           "longDescription": "long description",
           "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
-          "image": "/src/lib/assets/project-images/gradient.jpg",
+          "image": "/project-images/gradient.jpg",
           "githubLink": "/",
           "liveLink": "/",
           "visible": true
@@ -34,7 +34,42 @@
           "shortDescription": "short description",
           "longDescription": "long description",
           "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
-          "image": "/src/lib/assets/project-images/bird.jpg",
+          "image": "/project-images/bird.jpg",
+          "githubLink": "/",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+            "title": "title4",
+            "shortDescription": "short description",
+            "longDescription": "long description",
+            "tags": [
+                "Golang",
+                "SvelteKit",
+                "DevOps",
+                "AWS"
+            ],
+            "image": "/project-images/gradient.jpg",
+            "githubLink": "/",
+            "liveLink": "/",
+            "visible": true
+        },
+        {
+          "title": "title5",
+          "shortDescription": "short description",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/gradient.jpg",
+          "githubLink": "/",
+          "liveLink": "/",
+          "visible": true
+        },
+        {
+          "title": "title6",
+          "shortDescription": "short description",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
           "githubLink": "/",
           "liveLink": "",
           "visible": true
