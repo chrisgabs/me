@@ -23,6 +23,15 @@
     let projectsSectionY:number|null = null;
     let writingSectionY:number|null = null;
 
+    let copiedToClipboard:boolean = false;
+    let clipboardMenuOpen:boolean = false;
+
+    $: {
+        if (!clipboardMenuOpen) {
+            copiedToClipboard = false;
+        }
+    }
+
     onMount(async() => {
         aboutSectionY = document.getElementById("about")?.getBoundingClientRect().y!;
         workSectionY = document.getElementById("experience")?.getBoundingClientRect().y!;
@@ -91,17 +100,18 @@
 
     function highlightSelectedSection(previouslySelected:HTMLElement|null, currentlySelected:HTMLElement) {
         if (previouslySelected !== null) {
-            previouslySelected.classList.remove("w-3");
+            previouslySelected.classList.remove("w-4");
             previouslySelected.classList.add("w-px");
         }
         currentlySelected.classList.remove("w-px");
-        currentlySelected.classList.add("w-3");
+        currentlySelected.classList.add("w-4");
     }
 
     function copyTextToClipboard(text:string) {
         try {
-            navigator.clipboard.writeText(text);
-            console.log('Text copied to clipboard:', text);
+            navigator.clipboard.writeText(text).then(() => {
+                copiedToClipboard = true;
+            });
             return true;
         } catch (error) {
             console.error('Error copying text to clipboard:', error);
@@ -214,8 +224,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             <span>Email</span>
                         </a> -->
-                        <DropdownMenu.Root>
-                        <DropdownMenu.Trigger class="flex items-center gap-1">
+                        <DropdownMenu.Root bind:open={clipboardMenuOpen} preventScroll={false} closeOnItemClick={false}>
+                        <DropdownMenu.Trigger id="email-trigger" class="flex items-center gap-1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             <span>Email</span>
                         </DropdownMenu.Trigger>
@@ -229,9 +239,15 @@
                                 </a>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item>
-                                <button on:click={() => copyTextToClipboard("cbayquen.dev@gmail.com")} class="flex gap-2 items-center w-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-copy"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M16 4h2a2 2 0 0 1 2 2v4"/><path d="M21 14H11"/><path d="m15 10-4 4 4 4"/></svg>
-                                    Copy to cliboard
+                                <button on:click={() => copyTextToClipboard("cbayquen.dev@gmail.com")} class="flex gap-2 items-center w-full {copiedToClipboard ? "text-green-700" : ""}">
+                                    {#if copiedToClipboard}
+                                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                                        Copied to cliboard
+                                    {:else}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-copy"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M16 4h2a2 2 0 0 1 2 2v4"/><path d="M21 14H11"/><path d="m15 10-4 4 4 4"/></svg>
+                                        Copy to clipboard
+                                    {/if}
                                 </button>
                             </DropdownMenu.Item>
                         </DropdownMenu.Content>
@@ -276,7 +292,7 @@
                 <ol class="flex flex-col">
                     <WorkExperience 
                         datePeriod="2023 - Present" 
-                        workTitle="Assoc Applications Developer"
+                        workTitle="Associate Applications Developer"
                         company="Oracle"
                         description="Resolved customer issues through effective debugging and troubleshooting. Demonstrated proficiency in collaborating within a team and communicating with customers"
                         techBadges={oracleTechBadges}

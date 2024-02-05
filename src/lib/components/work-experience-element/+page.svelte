@@ -21,16 +21,14 @@
             <span class="overflow-auto font-semibold text-xs">{datePeriod}</span>
         </div>
         <div>
-            <h3 class="mb-1">
-                <span class="font-bold text-lg leading-normal sm:text-xl md:text-lg">{workTitle} -
+            <h3 class="mb-1 flex-wrap">
+                <span class=" font-bold text-lg leading-normal sm:text-xl md:text-lg">{workTitle} -
                     {#if link !== ""}
-                         <a href={link} class="underline-offset-4 link cursor-pointer hover:underline">
-                             {company}
-                         </a>
+                         <a href={link} class="inline-block after:inline-block underline-offset-4 link cursor-pointer hover:underline">
+                             {company}</a>
                     {:else}
                          <span>
-                             {company}
-                         </span>
+                             {company}</span>
                     {/if}
                 </span>
             </h3>
