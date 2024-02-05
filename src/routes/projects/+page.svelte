@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
-    import ProjectSmall from '$lib/components/project-small/+page.svelte';
+    import ProjectSmall from '$lib/components/project-collapsible-element/+page.svelte';
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { Separator } from "$lib/components/ui/separator";
     import { onMount } from "svelte";
@@ -90,7 +90,7 @@
                 <Collapsible.Trigger class="inline-flex items-center w-fit justify-center text-sm font-medium whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 rounded-none border-l border-t border-b-4 border-r-4 border-slate-700 md:hover:bg-inherit md:border-none md:p-0 md:text-2xl md:font-bold">
                     Filters
                 </Collapsible.Trigger>
-                <Button variant="outline" class="md:hidden rounded-none border-l border-t border-b-4 border-r-4 border-slate-700"
+                <Button variant="outline" class="md:hidden rounded-sm border-l border-t border-b-4 border-r-4 border-slate-700"
                     on:click={() => expanded = !expanded}
                 >
                     {#if expanded} Collapse All Projects {:else} Expand All Projects {/if}
@@ -119,7 +119,7 @@
 
             <Separator class="hidden md:flex my-6"/>
 
-            <Button variant="outline" class="hidden md:flex w-fit rounded-none border-l border-t border-b-4 border-r-4 border-slate-700"
+            <Button variant="outline" class="hidden md:flex w-fit rounded-sm border-l border-t border-b-4 border-r-4 border-slate-700"
                     on:click={() => expanded = !expanded}
             >
                 {#if expanded} Collapse All Projects {:else} Expand All Projects {/if}

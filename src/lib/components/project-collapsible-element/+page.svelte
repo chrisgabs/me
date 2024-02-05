@@ -22,7 +22,7 @@
             <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
     {/each}
 </ul> -->
-<Collapsible.Root class="w-full h-fit border border-r-4 border-slate-700" bind:open={collapsibleOpen}>
+<Collapsible.Root class="w-full h-fit border border-r-4 rounded-sm border-slate-700" bind:open={collapsibleOpen}>
     <Collapsible.Trigger class="flex justify-between items-center w-full p-4">
         <div class="flex flex-col gap-2 text-start">
             <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 lg:w-full">
@@ -54,18 +54,12 @@
         <p class="text-sm leading-relaxed tracking-wide">{longDescription}</p>
 
         <div class="flex gap-3">
-            <button class="">
-                <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
-                    Github
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                </span>
-            </button>
-            <button class="">
-                <span class="inline-flex items-center gap-1 font-semibold text-sm hover:underline underline-offset-4">
-                    Live Demo
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                </span>
-            </button>
+            <a href="/" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
+                Github
+            </a>
+            <a href="/" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
+                Live Demo
+            </a>
         </div>
     </Collapsible.Content>
 </Collapsible.Root>
