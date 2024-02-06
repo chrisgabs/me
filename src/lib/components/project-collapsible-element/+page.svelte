@@ -24,13 +24,13 @@
 </ul> -->
 <Collapsible.Root class="w-full h-fit border border-r-4 rounded-sm border-slate-700" bind:open={collapsibleOpen}>
     <Collapsible.Trigger class="flex justify-between items-center w-full p-4">
-        <div class="flex flex-col gap-2 text-start">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 lg:w-full">
+        <div class="flex flex-col gap-1 text-start">
+            <div class="flex flex-col flex-wrap lg:w-full">
                 <h3 class="text-lg font-bold text-start">{title}</h3>
                 <p class="text-sm leading-relaxed tracking-wide">{shortDescription}</p>
             </div>
             {#if !collapsibleOpen}
-            <ul class="hidden lg:flex gap-2 group-hover:mb-2">
+            <ul class="flex gap-2 group-hover:mb-2">
                 {#each tags as tag}
                 <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{tag}</Badge></li>
                 <!-- <li class="text-xs font-semibold">{badge} |</li> -->

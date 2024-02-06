@@ -5,43 +5,38 @@
     },
     "data": [
         {
-            "title": "title1",
-            "shortDescription": "short description",
+            "title": "Tictactoe",
+            "shortDescription": "But you can eat pieces and its for four players",
             "longDescription": "long description",
-            "tags": [
-                "Golang",
-                "SvelteKit",
-                "DevOps",
-                "AWS"
-            ],
+            "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
             "image": "/project-images/gradient.jpg",
-            "githubLink": "/",
-            "liveLink": "/",
+            "githubLink": "https://github.com/chrisgabs/tictactoe2",
+            "liveLink": "",
             "visible": true
         },
         {
-          "title": "title2",
-          "shortDescription": "short description",
+          "title": "Roots calculator",
+          "shortDescription": "Approximate the roots of an equation using bracketing methods",
           "longDescription": "long description",
           "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
           "image": "/project-images/gradient.jpg",
-          "githubLink": "/",
-          "liveLink": "/",
-          "visible": true
-        },
-        {
-          "title": "title3",
-          "shortDescription": "short description",
-          "longDescription": "long description",
-          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "/",
+          "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
           "liveLink": "",
           "visible": true
         },
         {
-            "title": "title4",
-            "shortDescription": "short description",
+          "title": "Gentoo",
+          "shortDescription": "Twitter clone with hate speech classification",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+            "title": "Huffman tree visualizer",
+            "shortDescription": "See how the huffman algorithm compresses text step by step",
             "longDescription": "long description",
             "tags": [
                 "Golang",
@@ -50,29 +45,90 @@
                 "AWS"
             ],
             "image": "/project-images/gradient.jpg",
-            "githubLink": "/",
-            "liveLink": "/",
+            "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
+            "liveLink": "",
             "visible": true
         },
         {
-          "title": "title5",
+          "title": "Dijkstra algorithm visualizer",
           "shortDescription": "short description",
           "longDescription": "long description",
           "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
           "image": "/project-images/gradient.jpg",
-          "githubLink": "/",
-          "liveLink": "/",
+          "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+          "liveLink": "",
           "visible": true
         },
         {
-          "title": "title6",
+          "title": "Textra",
           "shortDescription": "short description",
           "longDescription": "long description",
           "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
           "image": "/project-images/bird.jpg",
-          "githubLink": "/",
+          "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Events management system",
+          "shortDescription": "short description",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Volunteer management system",
+          "shortDescription": "short description",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Vaccination dashboard",
+          "shortDescription": "short description",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Calculator",
+          "shortDescription": "simple & scientific calculator",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Scribe",
+          "shortDescription": "simple & scientific calculator",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+          "liveLink": "",
+          "visible": true
+        },
+        {
+          "title": "Wallet 2.0",
+          "shortDescription": "simple & scientific calculator",
+          "longDescription": "long description",
+          "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+          "image": "/project-images/bird.jpg",
+          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
           "liveLink": "",
           "visible": true
         }
+        
     ]
 }
