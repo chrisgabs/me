@@ -70,7 +70,7 @@
     }
 </script>
 
-<div class="xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 sm:bg-slate-500 md:bg-yellow-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div>
+<!-- <div class="xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 sm:bg-slate-500 md:bg-yellow-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div> -->
 
 <div class="flex flex-col w-full h-full px-12 sm:max-w-2xl sm:mx-auto md:min-w-fit md:mx-auto lg:mx-auto lg:justify-between xl:px-20">
 
@@ -78,10 +78,14 @@
 
     </button> -->
 
-    <header class="pt-24 mb-16">
+    <header class="flex flex-col gap-3 pt-24 mb-16 ">
+            <a href="/" class="flex gap-2 items-center font-semibold text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left"><path d="M6 8L2 12L6 16"/><path d="M2 12H22"/></svg>
+                Home
+            </a>
         <h1 class="text-4xl font-bold tracking-tight">Projects Archive</h1>
         <!-- <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Applications Engineer at Oracle</h2> -->
-        <p class="mt-3 max-w-xs leading-normal">Here are some of the projects I've been working on since I've learned how to code.</p>
+        <p class="max-w-xs leading-normal">Here are some of the projects I've been working on since I've learned how to code.</p>
     </header>
 
     <div class="flex flex-col gap-6 md:flex-row md:min-w-fit">
