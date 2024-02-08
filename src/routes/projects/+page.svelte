@@ -87,7 +87,7 @@
     <div class="flex flex-col gap-6 md:flex-row md:min-w-fit">
         <Collapsible.Root bind:open={filterIsOpen} bind:disabled={filtersPermanentlyOpen} id="filters" class="flex flex-col w-full gap-4 md:w-fit md:gap-0">
             <div id="controls" class="flex justify-between md:flex-col">
-                <Collapsible.Trigger class="inline-flex items-center w-fit justify-center text-sm font-medium whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 rounded-none border-l border-t border-b-4 border-r-4 border-slate-700 md:hover:bg-inherit md:border-none md:p-0 md:text-2xl md:font-bold">
+                <Collapsible.Trigger class="inline-flex items-center w-fit rounded-sm justify-center text-sm font-medium whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 border-l border-t border-b-4 border-r-4 border-slate-700 md:hover:bg-inherit md:border-none md:p-0 md:text-2xl md:font-bold">
                     Filters
                 </Collapsible.Trigger>
                 <Button variant="outline" class="md:hidden rounded-sm border-l border-t border-b-4 border-r-4 border-slate-700"
@@ -142,6 +142,8 @@
                         longDescription={project["longDescription"]}
                         image={project["image"]}
                         tags={project["tags"]}
+                        githubLink={project["githubLink"]}
+                        liveLink={project["liveLink"]}
                     />
                 {/if}
             {/each}

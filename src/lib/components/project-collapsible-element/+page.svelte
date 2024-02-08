@@ -8,6 +8,8 @@
     export let shortDescription:string = "short description";
     export let longDescription:string = "long description";
     export let tags:string[] = [];
+    export let githubLink:string = ""
+    export let liveLink:string = ""
 
     export let allCollapsibleOpen:boolean = false;
     let collapsibleOpen:boolean = false;
@@ -30,7 +32,7 @@
                 <p class="text-sm leading-relaxed tracking-wide">{shortDescription}</p>
             </div>
             {#if !collapsibleOpen}
-            <ul class="flex gap-2 group-hover:mb-2">
+            <ul class="flex flex-wrap gap-2 group-hover:mb-2">
                 {#each tags as tag}
                 <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{tag}</Badge></li>
                 <!-- <li class="text-xs font-semibold">{badge} |</li> -->
@@ -45,7 +47,7 @@
             <img src="{image}" alt="asdasd" class="object-cover w-full h-full"/>
         </figure>
 
-        <ul class="flex gap-2 group-hover:mb-2">
+        <ul class="flex flex-wrap gap-2 group-hover:mb-2">
             {#each tags as tag}
                     <li><Badge variant="secondary" class="neo-badge">{tag}</Badge></li>
             {/each}
@@ -54,12 +56,16 @@
         <p class="text-sm leading-relaxed tracking-wide">{longDescription}</p>
 
         <div class="flex gap-3">
-            <a href="/" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
-                Github
-            </a>
-            <a href="/" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
-                Live Demo
-            </a>
+            {#if githubLink !== ""}
+                 <a href="{githubLink}" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
+                     Github
+                 </a>
+            {/if}
+            {#if liveLink !== ""}
+                 <a href="{liveLink}" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
+                     Live Demo
+                 </a>
+            {/if}
         </div>
     </Collapsible.Content>
 </Collapsible.Root>

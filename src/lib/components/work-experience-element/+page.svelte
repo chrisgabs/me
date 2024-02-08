@@ -17,7 +17,7 @@
     </div>
     <!-- <div class="absolute bg-slate-700 rounded-full left-[2.6rem] w-3.5 h-3.5 mt-0.5 sm:hidden"/> -->
     <div class="flex flex-col gap-3 border-l border-solid border-slate-700 pl-4 {lastElement ? "pb-5" : "pb-10"} transition-all">
-        <div class="inline-flex whitespace-nowrap w-80 sm:hidden">
+        <div class="inline-flex whitespace-nowrap sm:hidden">
             <span class="overflow-auto font-semibold text-xs">{datePeriod}</span>
         </div>
         <div>

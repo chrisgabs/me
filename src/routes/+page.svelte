@@ -125,7 +125,7 @@
 
 <div class="flex flex-col w-fit h-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
 
-    <header class="flex h-screen w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
+    <header class="flex h-dvh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="heading">
@@ -280,7 +280,7 @@
             <h2 class="font-bold text-2xl">Professional Background</h2>
         </div>
         
-        <Tabs.Root value="work">
+        <Tabs.Root value="work" class="min-w-auto">
         <Tabs.List class="text-muted-foreground justify-start rounded-none bg-transparent p-0">
             <Tabs.Trigger value="work" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Work</Tabs.Trigger>
             <Tabs.Trigger value="school" class="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none">Academic</Tabs.Trigger>
@@ -318,7 +318,7 @@
             <Tabs.Content value="school">
             <div class="flex flex-col gap-4 mt-5">
                 <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
-                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                    <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Academic Achievements</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
@@ -328,7 +328,7 @@
                     </ol>
                 </div>
                 <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
-                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                    <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Research Work</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
@@ -353,7 +353,7 @@
             <Tabs.Content value="freelance">
             <div class="flex flex-col gap-4 mt-5">
                 <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
-                    <div class="inline-flex whitespace-nowrap w-80 mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
+                    <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">2023-2023</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
