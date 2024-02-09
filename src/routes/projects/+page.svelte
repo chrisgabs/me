@@ -26,7 +26,7 @@
             projectsArchive["data"].forEach((project) => {
                 project["visible"] = false;
                 enabledTags.forEach((tag) => {
-                    if (project["tags"].includes(tag)) {
+                    if (project["filterTags"].includes(tag)) {
                         project["visible"] = true;
                     }
                 })
@@ -132,7 +132,7 @@
     
 
         <Separator orientation="horizontal" class="md:hidden"/>
-        <Separator orientation="vertical" class="hidden md:flex h-96"/>
+        <Separator orientation="vertical" class="hidden md:flex h-96 w-px"/>
     
         <content class="flex grow flex-col gap-6 pb-12 w-full md:w-[32rem] lg:w-[36rem] transition-all">
     

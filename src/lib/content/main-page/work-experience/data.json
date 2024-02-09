@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2023 - Present",
+    "title": "Associate Applications Developer",
+    "company": "Oracle",
+    "companyWebsite": "https://www.oracle.com/ph/",
+    "description": "Resolved customer issues through effective debugging and troubleshooting. Demonstrated proficiency in collaborating within a team and communicating with customers",
+    "tags": ["Java", "PLSQL", "Agile PLM", "WebLogic"],
+    "lastElement": false
+  },
+  {
+    "date": "Jun - Aug 2022",
+    "title": "Software Developer Intern",
+    "company": "Trend Micro",
+    "companyWebsite": "https://www.trendmicro.com/",
+    "description": "I worked with their core tech infrastructure team, where I upgraded one of their internal data visualization tools and deployed it on AWS. I learned how to work with an agile methodology and ensure that the software I develop is production-ready.",
+    "tags": ["Python", "AWS", "Github Actions", "Apache Superset"],
+    "lastElement": false
+  },
+  {
+    "date": "May - July 2019",
+    "title": "Wordpress Developer",
+    "company": "SubicBayNews",
+    "companyWebsite": "https://subicbaynews.com/",
+    "description": "Migrated subicbaynews.com to WordPress 5.2 along with its database and plug-ins. Created a user-manual for the website and presented it to SubicBayNews’ owner.",
+    "tags": ["Wordpress", "PHP"],
+    "lastElement": true
+  }
+]

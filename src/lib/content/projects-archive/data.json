@@ -1,129 +1,190 @@
 {
-    "constants": {
-        "languages": ["Golang", "JS/TS", "Python", "Java"],
-        "tags": ["DevOps", "AWS", "Frontend", "Backend"]
-    },
-    "data": [
-        {
-            "title": "Tictactoe",
-            "shortDescription": "Four player tictactoe where you take each other's pieces",
-            "longDescription": "Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
-            "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
-            "image": "/project-images/gradient.jpg",
-            "githubLink": "https://github.com/chrisgabs/tictactoe2",
-            "liveLink": "",
-            "visible": true
-        },
-        {
-          "title": "Roots calculator",
-          "shortDescription": "Approximate the roots of an equation using bracketing methods",
-          "longDescription": "Bracketing methods you can use: Bisection, False Position, Newton Rhapson, Secant, Simple Fixed Point Iteration, Non-Linear.\n Built with Flask hosted on Heroku",
-          "tags": ["Python", "Flask", "Heroku"],
-          "image": "/project-images/gradient.jpg",
-          "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Gentoo",
-          "shortDescription": "Twitter clone with hate speech classification",
-          "longDescription": "A twitter clone integrated with an internally developed BERT hate speech classifier. Employs multi-task text classification to assess hatefulness and targeted communities. Enables administrators to moderate the platform using AI assisted tools.",
-          "tags": ["Golang", "Python", "FastAPI", "PyTorch", "NextJS", "PostgreSQL"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Huffman tree visualizer",
-          "shortDescription": "Visualize the step by step process of the huffman compression algorithm",
-          "longDescription": "long description",
-          "tags": ["Java", "Swing", "Visualizer"],
-          "image": "/project-images/gradient.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Graph algorithms visualizer",
-          "shortDescription": "Dijkstra's path finding, Depth-First Search, Breadth-First Search",
-          "longDescription": "Visualizes a graph in a radial manner given the graph’s edges and weights. Highlights the edges an algorithm visits while it is running.",
-          "tags": ["Java", "Swing", "Visualizer"],
-          "image": "/project-images/gradient.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Textra",
-          "shortDescription": "Desktop messaging application",
-          "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements features such as registration requests and banning of users.",
-          "tags": ["Java", "JavaFX", "MySQL", "Sockets"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Events management system",
-          "shortDescription": "CRUD application to manage your events",
-          "longDescription": "Events management system with PHP and Express backend integrated with a MySQL database.",
-          "tags": ["JS", "Express", "PHP", "MySQL", "CRUD"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Volunteer management system",
-          "shortDescription": "CRUD application to manage events and volunteers",
-          "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
-          "tags": ["Java", "JavaFX", "MySQL", "AWS", "CRUD"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Vaccination Dashboard",
-          "shortDescription": "Data visualization from scratch",
-          "longDescription": "",
-          "tags": ["JS", "HTML", "CSS"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Calculator",
-          "shortDescription": "Simple & scientific calculator",
-          "longDescription": "First project that I was proud of :D Implemented the shunting yard algorithm for this calculator. Made this in my first year of taking comptuer science degree.",
-          "tags": ["Java", "Swing"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Scribe",
-          "shortDescription": "Generate slides and transcription from a lecture video",
-          "longDescription": "",
-          "tags": ["Python", "Whisper", "FastAPI", "Sveltekit"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
-          "liveLink": "",
-          "visible": true
-        },
-        {
-          "title": "Wallet 2.0",
-          "shortDescription": "Manage your finances",
-          "longDescription": "",
-          "tags": ["Sveltekit", "Supabase", "TS"],
-          "image": "/project-images/bird.jpg",
-          "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
-          "liveLink": "",
-          "visible": true
-        }
-        
+  "constants": {
+    "languages": ["Golang", "JS/TS", "Python", "Java"],
+    "tags": [
+      "SvelteKit",
+      "AI",
+      "CRUD",
+      "Visualizer",
+      "AWS",
+      "Algorithms",
+      "FastAPI",
+      "NextJS",
+      "Sockets",
+      "JavaFX",
+      "Swing"
     ]
+  },
+  "data": [
+    {
+      "title": "Tictactoe",
+      "shortDescription": "Four player tictactoe where you take each other's pieces",
+      "longDescription": "Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
+      "tags": ["Golang", "JS", "SvelteKit", "DevOps", "AWS"],
+      "filterTags": [
+        "Golang",
+        "SvelteKit",
+        "DevOps",
+        "AWS",
+        "JS/TS",
+        "Sockets"
+      ],
+      "image": "/project-images/gradient.jpg",
+      "githubLink": "https://github.com/chrisgabs/tictactoe2",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Gentoo",
+      "shortDescription": "Twitter clone with hate speech classification",
+      "longDescription": "A twitter clone integrated with an internally developed BERT hate speech classifier. Employs multi-task text classification to assess hatefulness and targeted communities. Enables administrators to moderate the platform using our developed AI model.",
+      "tags": [
+        "Golang",
+        "Python",
+        "TS",
+        "AI",
+        "FastAPI",
+        "PyTorch",
+        "NextJS",
+        "PostgreSQL"
+      ],
+      "filterTags": [
+        "Golang",
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "NextJS",
+        "PostgreSQL",
+        "JS/TS",
+        "AI"
+      ],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Me",
+      "shortDescription": "This current personal website",
+      "longDescription": "My personalized mark on the internet serving as my online resume and dictionary of sorts",
+      "tags": ["SvelteKit", "TS", "Vercel"],
+      "filterTags": ["SvelteKit", "TS", "Vercel"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Textra",
+      "shortDescription": "Desktop messaging application",
+      "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
+      "tags": ["Java", "JavaFX", "MySQL", "Sockets"],
+      "filterTags": ["Java", "JavaFX", "MySQL", "Sockets", "CRUD"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Scribe",
+      "shortDescription": "Generate slides and transcription from a lecture video",
+      "longDescription": "",
+      "tags": ["Python", "Whisper", "FastAPI", "SvelteKit"],
+      "filterTags": ["Python", "Whisper", "FastAPI", "SvelteKit", "AI"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Graph algorithms visualizer",
+      "shortDescription": "Dijkstra's path finding, Depth-First Search, Breadth-First Search",
+      "longDescription": "Visualizes a graph in a radial manner given the graph’s edges and weights. Highlights the edges an algorithm visits while it is running.",
+      "tags": ["Java", "Swing", "Visualizer"],
+      "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
+      "image": "/project-images/gradient.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Huffman tree visualizer",
+      "shortDescription": "Visualize the step by step process of the huffman compression algorithm",
+      "longDescription": "long description",
+      "tags": ["Java", "Swing", "Visualizer"],
+      "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
+      "image": "/project-images/gradient.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Events management system",
+      "shortDescription": "CRUD application to manage your events",
+      "longDescription": "Events management system with PHP and Express backend integrated with a MySQL database.",
+      "tags": ["JS", "Express", "PHP", "MySQL", "CRUD"],
+      "filterTags": ["JS/TS", "Express", "PHP", "MySQL", "CRUD"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Roots calculator",
+      "shortDescription": "Approximate the roots of an equation using bracketing methods",
+      "longDescription": "Bracketing methods you can use: Bisection, False Position, Newton Rhapson, Secant, Simple Fixed Point Iteration, Non-Linear.\n Built with Flask hosted on Heroku",
+      "tags": ["Python", "Flask", "Heroku"],
+      "filterTags": ["Python", "Flask", "Heroku", "Algorithms"],
+      "image": "/project-images/gradient.jpg",
+      "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Volunteer management system",
+      "shortDescription": "CRUD application to manage events and volunteers",
+      "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
+      "tags": ["Java", "JavaFX", "MySQL", "AWS", "CRUD"],
+      "filterTags": ["Java", "JavaFX", "MySQL", "AWS", "CRUD"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Vaccination Dashboard",
+      "shortDescription": "Data visualization from scratch",
+      "longDescription": "",
+      "tags": ["JS", "HTML", "CSS"],
+      "filterTags": ["JS", "HTML", "CSS"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Calculator",
+      "shortDescription": "Simple & scientific calculator",
+      "longDescription": "First project that I was proud of :D Implemented the shunting yard algorithm for this calculator. Made this in my first year of taking comptuer science degree.",
+      "tags": ["Java", "Swing"],
+      "filterTags": ["Java", "Swing", "Algorithms"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+      "liveLink": "",
+      "visible": true
+    }
+  ],
+  "inProgress": [
+    {
+      "title": "Wallet 2.0",
+      "shortDescription": "Manage your finances",
+      "longDescription": "",
+      "tags": ["SvelteKit", "Supabase", "TS"],
+      "filterTags": ["SvelteKit", "JS/TS", "Supabase", "CRUD"],
+      "image": "/project-images/bird.jpg",
+      "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+      "liveLink": "",
+      "visible": true
+    }
+  ]
 }

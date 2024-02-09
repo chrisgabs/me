@@ -2,12 +2,12 @@
     import { Badge } from "$lib/components/ui/badge";
 
     export let datePeriod:string = "date period";
-    export let workTitle:string  = "work title";
+    export let title:string  = "work title";
     export let company:string  = "company";
+    export let companyWebsite:string = "/";
     export let description:string  = "description";
-    export let techBadges:string[] = [];
+    export let tags:string[] = [];
     export let lastElement:boolean = false;
-    export let link:string = "/";
 
 </script>
 
@@ -22,9 +22,9 @@
         </div>
         <div>
             <h3 class="mb-1 flex-wrap">
-                <span class=" font-bold text-lg leading-normal sm:text-xl md:text-lg">{workTitle} -
-                    {#if link !== ""}
-                         <a href={link} class="inline-block after:inline-block underline-offset-4 link cursor-pointer hover:underline">
+                <span class=" font-bold text-lg leading-normal sm:text-xl md:text-lg">{title} -
+                    {#if companyWebsite !== ""}
+                         <a href={companyWebsite} target="_blank" class="inline-block after:inline-block underline-offset-4 link cursor-pointer hover:underline">
                              {company}</a>
                     {:else}
                          <span>
@@ -33,10 +33,10 @@
                 </span>
             </h3>
             <p class="leading-relaxed mb-2 text-sm tracking-wide max-w-lg text-justify">{description}</p>
-            <ul class="flex gap-2">
-                {#if techBadges !== null}
-                    {#each techBadges as badge}
-                        <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
+            <ul class="flex gap-2 flex-wrap">
+                {#if tags !== null}
+                    {#each tags as tag}
+                        <li><Badge variant="secondary" class="neo-badge">{tag}</Badge></li>
                     {/each}
                 {/if}
             </ul>

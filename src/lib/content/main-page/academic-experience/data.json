@@ -1,0 +1,33 @@
+{
+  "academicAchievements": [
+    {
+      "title": "B.S. in Computer Science, achieved in 2023",
+      "descriptions": [
+        "Graduated with with great distinction (Magna cum laude)",
+        "Conferred by Saint Louis University (Baguio City, PH)"
+      ]
+    }
+  ],
+  "researchWork": [
+    {
+      "title": "Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)",
+      "descriptions": [
+        "Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.”",
+        "Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification."
+      ]
+    },
+    {
+      "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
+      "descriptions": [
+        "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments."
+      ]
+    },
+    {
+      "title": "Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)",
+      "descriptions": [
+        "Accepted for presentation at the International Conference in IT Education (ICITE2023).",
+        "Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support."
+      ]
+    }
+  ]
+}

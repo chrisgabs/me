@@ -1,21 +1,19 @@
 <script lang="ts">
     // import { Button } from "$lib/components/ui/button";
     import { Badge } from "$lib/components/ui/badge";
-    import { Button } from "$lib/components/ui/button";
     import * as Tabs from "$lib/components/ui/tabs";
     import WorkExperience from "$lib/components/work-experience-element/+page.svelte";
-    import AcademicExperience from "$lib/components/generic-experience-element/+page.svelte";
+    import Experience from "$lib/components/generic-experience-element/+page.svelte";
     import Project from "$lib/components/project-element/+page.svelte";
     import ProjectViewMore from "$lib/components/projects-showmore-element/+page.svelte";
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-    import tictactoeImage from '$lib/assets/tictactoes.png';
     import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
-    import samplePicture from '$lib/assets/sample.png';
     import { onMount } from "svelte";
-
-
-    const oracleTechBadges: string[] = ["Java", "PLSQL", "Agile PLM"];
+    import featuredProjects from "$lib/content/main-page/projects-showcase/data.json"
+    import workExperience from "$lib/content/main-page/work-experience/data.json";
+    import academicExperience from "$lib/content/main-page/academic-experience/data.json";
+    import freelanceExperience from "$lib/content/main-page/freelance-experience/data.json";
     
     let previouslySelectedElement:HTMLElement|null = null;
     let aboutSectionY:number|null = null;
@@ -130,11 +128,13 @@
             <div class="flex flex-col gap-20">
             <div id="heading">
                 <div class="flex mb-2 gap-2">
-                    <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit neo-badge">
-                        <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
-                        <span class="font-bold">Ready to Connect</span>
-                    </Badge>
-                    <div class="flex gap-0.5 items-center">
+                    <button on:click={() => {clipboardMenuOpen = true}}>
+                        <Badge variant="secondary" class="flex gap-2 w-fit bg-inherit neo-badge">
+                            <div class="relative inline-flex h-2 w-2 rounded-full bg-green-500"/> 
+                            <span class="font-bold">Ready to Connect</span>
+                        </Badge>
+                    </button>
+                    <div title="Philippines" class="flex gap-0.5 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                         <span class="font-semibold">PH</span>
                     </div>
@@ -144,28 +144,27 @@
                 <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Applications Engineer at Oracle</h2>
                 <p class="mt-8 max-w-xs leading-normal">I love automation, problem solving, and building meaningful applications with:</p>
                 <ul class="flex mt-5 gap-4">
-                    <li>
-                        <!-- js -->
-                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="26.25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
-                    </li>
-                    <li>
-                        <!-- svelte -->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.94" height="30" viewBox="0 0 256 308" version="1.1" preserveAspectRatio="xMidYMid"><g><path d="M239.681566,40.706757 C211.113272,-0.181889366 154.69089,-12.301439 113.894816,13.6910393 L42.2469062,59.3555354 C22.6760042,71.6680028 9.1958152,91.6538543 5.11196889,114.412133 C1.69420521,133.371174 4.6982178,152.928576 13.6483951,169.987905 C7.51549676,179.291145 3.33259428,189.7413 1.3524912,200.706787 C-2.77083771,223.902098 2.62286977,247.780539 16.3159596,266.951444 C44.8902975,307.843936 101.312954,319.958266 142.10271,293.967161 L213.75062,248.302665 C233.322905,235.991626 246.803553,216.005094 250.885557,193.246067 C254.302867,174.287249 251.30121,154.730228 242.355449,137.668922 C248.486748,128.365895 252.667894,117.916162 254.646134,106.951413 C258.772188,83.7560394 253.378243,59.8765465 239.682665,40.706757" fill="#000000"/><path d="M106.888658,270.841265 C83.7871855,276.848065 59.3915045,267.805346 45.7864111,248.192566 C37.5477583,236.66102 34.3023491,222.296573 36.7830958,208.343155 C37.1989333,206.075414 37.7711933,203.839165 38.4957755,201.650433 L39.845476,197.534835 L43.5173097,200.231763 C51.9971301,206.462491 61.4784803,211.199728 71.5527203,214.239302 L74.2164003,215.047419 L73.9710252,217.705878 C73.6455499,221.487851 74.6696022,225.262925 76.8616703,228.361972 C80.9560313,234.269749 88.3011363,236.995968 95.2584831,235.190159 C96.8160691,234.773852 98.3006859,234.121384 99.6606718,233.25546 L171.331634,187.582718 C174.877468,185.349963 177.321139,181.729229 178.065299,177.605596 C178.808171,173.400048 177.830501,169.072361 175.351884,165.594581 C171.255076,159.685578 163.908134,156.9582 156.947927,158.762547 C155.392392,159.178888 153.90975,159.83088 152.551509,160.695872 L125.202489,178.130144 C120.705281,180.989558 115.797437,183.144784 110.64897,184.521162 C87.547692,190.527609 63.1523949,181.484801 49.5475471,161.872188 C41.3085624,150.340895 38.0631179,135.976391 40.5442317,122.023052 C43.0002744,108.333716 51.1099574,96.3125326 62.8835328,88.9089537 L134.548175,43.2323647 C139.047294,40.3682559 143.958644,38.21032 149.111311,36.8336525 C172.21244,30.8273594 196.607527,39.8700206 210.212459,59.4823515 C218.451112,71.013898 221.696522,85.3783452 219.215775,99.3317627 C218.798144,101.59911 218.225915,103.835236 217.503095,106.024485 L216.153395,110.140083 L212.483484,107.447276 C204.004261,101.212984 194.522,96.4735732 184.44615,93.4336926 L181.78247,92.6253012 L182.027845,89.9668419 C182.350522,86.1852063 181.326723,82.4111645 179.1372,79.3110228 C175.042839,73.4032457 167.697734,70.677026 160.740387,72.4828355 C159.182801,72.8991426 157.698185,73.5516104 156.338199,74.4175344 L84.6672364,120.0922 C81.1218886,122.323199 78.6795938,125.943704 77.9387928,130.066574 C77.1913232,134.271925 78.1673502,138.601163 80.6469865,142.078963 C84.7438467,147.987899 92.0907405,150.71526 99.0509435,148.910997 C100.608143,148.493836 102.092543,147.841423 103.452857,146.976298 L130.798305,129.548621 C135.293566,126.685437 140.201191,124.528302 145.350175,123.152382 C168.451453,117.145935 192.846751,126.188743 206.451598,145.801356 C214.690583,157.332649 217.936027,171.697153 215.454914,185.650492 C212.997261,199.340539 204.888162,211.362752 193.115613,218.769811 L121.450695,264.442553 C116.951576,267.306662 112.040226,269.464598 106.887559,270.841265" fill="#FFFFFF"/></g></svg>
-                    </li>
-                    <li>
+                    <li title="Golang">
                         <!-- go -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="30" width="37.5" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M400.1 194.8C389.2 197.6 380.2 199.1 371 202.4C363.7 204.3 356.3 206.3 347.8 208.5L347.2 208.6C343 209.8 342.6 209.9 338.7 205.4C334 200.1 330.6 196.7 324.1 193.5C304.4 183.9 285.4 186.7 267.7 198.2C246.5 211.9 235.6 232.2 235.9 257.4C236.2 282.4 253.3 302.9 277.1 306.3C299.1 309.1 316.9 301.7 330.9 285.8C333 283.2 334.9 280.5 337 277.5V277.5L337 277.5C337.8 276.5 338.5 275.4 339.3 274.2H279.2C272.7 274.2 271.1 270.2 273.3 264.9C277.3 255.2 284.8 239 289.2 230.9C290.1 229.1 292.3 225.1 296.1 225.1H397.2C401.7 211.7 409 198.2 418.8 185.4C441.5 155.5 468.1 139.9 506 133.4C537.8 127.8 567.7 130.9 594.9 149.3C619.5 166.1 634.7 188.9 638.8 218.8C644.1 260.9 631.9 295.1 602.1 324.4C582.4 345.3 557.2 358.4 528.2 364.3C522.6 365.3 517.1 365.8 511.7 366.3C508.8 366.5 506 366.8 503.2 367.1C474.9 366.5 449 358.4 427.2 339.7C411.9 326.4 401.3 310.1 396.1 291.2C392.4 298.5 388.1 305.6 382.1 312.3C360.5 341.9 331.2 360.3 294.2 365.2C263.6 369.3 235.3 363.4 210.3 344.7C187.3 327.2 174.2 304.2 170.8 275.5C166.7 241.5 176.7 210.1 197.2 184.2C219.4 155.2 248.7 136.8 284.5 130.3C313.8 124.1 341.8 128.4 367.1 145.6C383.6 156.5 395.4 171.4 403.2 189.5C405.1 192.3 403.8 193.9 400.1 194.8zM48.3 200.4C47.1 200.4 46.7 199.8 47.4 198.8L53.9 190.4C54.5 189.5 56.1 188.9 57.3 188.9H168.6C169.8 188.9 170.1 189.8 169.5 190.7L164.2 198.8C163.6 199.8 162 200.7 161.1 200.7L48.3 200.4zM1.2 229.1C0 229.1-.3 228.4 .3 227.5L6.9 219.1C7.5 218.2 9 217.5 10.3 217.5H152.4C153.6 217.5 154.2 218.5 153.9 219.4L151.4 226.9C151.1 228.1 149.9 228.8 148.6 228.8L1.2 229.1zM75.7 255.9C75.1 256.8 75.4 257.7 76.7 257.7L144.6 258C145.5 258 146.8 257.1 146.8 255.9L147.4 248.4C147.4 247.1 146.8 246.2 145.5 246.2H83.2C82 246.2 80.7 247.1 80.1 248.1L75.7 255.9zM577.2 237.9C577 235.3 576.9 233.1 576.5 230.9C570.9 200.1 542.5 182.6 512.9 189.5C483.9 196 465.2 214.4 458.4 243.7C452.8 268 464.6 292.6 487 302.6C504.2 310.1 521.3 309.2 537.8 300.7C562.4 287.1 575.8 268 577.4 241.2C577.3 240 577.3 238.9 577.2 237.9z"/></svg>
                     </li>
-                    <li>
-                        <!-- java -->
-                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="22.5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M277.7 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.8 0 242.8 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.2 12.2 0 0 1 -2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.3 17.3 0 0 0 -8.2 6.3 70.5 70.5 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6 .7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.8 509.4 401 461.3 348 437.4zM124.4 396c-78.7 22 47.9 67.4 148.1 24.5a185.9 185.9 0 0 1 -28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.6 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.4 60.4 0 0 1 -21.1-12.8z"/></svg>
+                    <li title="SvelteKit">
+                        <!-- svelte -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.94" height="30" viewBox="0 0 256 308" version="1.1" preserveAspectRatio="xMidYMid"><g><path d="M239.681566,40.706757 C211.113272,-0.181889366 154.69089,-12.301439 113.894816,13.6910393 L42.2469062,59.3555354 C22.6760042,71.6680028 9.1958152,91.6538543 5.11196889,114.412133 C1.69420521,133.371174 4.6982178,152.928576 13.6483951,169.987905 C7.51549676,179.291145 3.33259428,189.7413 1.3524912,200.706787 C-2.77083771,223.902098 2.62286977,247.780539 16.3159596,266.951444 C44.8902975,307.843936 101.312954,319.958266 142.10271,293.967161 L213.75062,248.302665 C233.322905,235.991626 246.803553,216.005094 250.885557,193.246067 C254.302867,174.287249 251.30121,154.730228 242.355449,137.668922 C248.486748,128.365895 252.667894,117.916162 254.646134,106.951413 C258.772188,83.7560394 253.378243,59.8765465 239.682665,40.706757" fill="#000000"/><path d="M106.888658,270.841265 C83.7871855,276.848065 59.3915045,267.805346 45.7864111,248.192566 C37.5477583,236.66102 34.3023491,222.296573 36.7830958,208.343155 C37.1989333,206.075414 37.7711933,203.839165 38.4957755,201.650433 L39.845476,197.534835 L43.5173097,200.231763 C51.9971301,206.462491 61.4784803,211.199728 71.5527203,214.239302 L74.2164003,215.047419 L73.9710252,217.705878 C73.6455499,221.487851 74.6696022,225.262925 76.8616703,228.361972 C80.9560313,234.269749 88.3011363,236.995968 95.2584831,235.190159 C96.8160691,234.773852 98.3006859,234.121384 99.6606718,233.25546 L171.331634,187.582718 C174.877468,185.349963 177.321139,181.729229 178.065299,177.605596 C178.808171,173.400048 177.830501,169.072361 175.351884,165.594581 C171.255076,159.685578 163.908134,156.9582 156.947927,158.762547 C155.392392,159.178888 153.90975,159.83088 152.551509,160.695872 L125.202489,178.130144 C120.705281,180.989558 115.797437,183.144784 110.64897,184.521162 C87.547692,190.527609 63.1523949,181.484801 49.5475471,161.872188 C41.3085624,150.340895 38.0631179,135.976391 40.5442317,122.023052 C43.0002744,108.333716 51.1099574,96.3125326 62.8835328,88.9089537 L134.548175,43.2323647 C139.047294,40.3682559 143.958644,38.21032 149.111311,36.8336525 C172.21244,30.8273594 196.607527,39.8700206 210.212459,59.4823515 C218.451112,71.013898 221.696522,85.3783452 219.215775,99.3317627 C218.798144,101.59911 218.225915,103.835236 217.503095,106.024485 L216.153395,110.140083 L212.483484,107.447276 C204.004261,101.212984 194.522,96.4735732 184.44615,93.4336926 L181.78247,92.6253012 L182.027845,89.9668419 C182.350522,86.1852063 181.326723,82.4111645 179.1372,79.3110228 C175.042839,73.4032457 167.697734,70.677026 160.740387,72.4828355 C159.182801,72.8991426 157.698185,73.5516104 156.338199,74.4175344 L84.6672364,120.0922 C81.1218886,122.323199 78.6795938,125.943704 77.9387928,130.066574 C77.1913232,134.271925 78.1673502,138.601163 80.6469865,142.078963 C84.7438467,147.987899 92.0907405,150.71526 99.0509435,148.910997 C100.608143,148.493836 102.092543,147.841423 103.452857,146.976298 L130.798305,129.548621 C135.293566,126.685437 140.201191,124.528302 145.350175,123.152382 C168.451453,117.145935 192.846751,126.188743 206.451598,145.801356 C214.690583,157.332649 217.936027,171.697153 215.454914,185.650492 C212.997261,199.340539 204.888162,211.362752 193.115613,218.769811 L121.450695,264.442553 C116.951576,267.306662 112.040226,269.464598 106.887559,270.841265" fill="#FFFFFF"/></g></svg>
                     </li>
-                    <li>
-
+                    <li title="Python">
                         <!-- python -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="30" width="28.13" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4 .1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8 .1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3 .1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
                     </li>
-                    <li>
+                    <li title="Javascript/Typescript">
+                        <!-- js -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="26.25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                    </li>
+                    <li title="Java">
+                        <!-- java -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="22.5" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M277.7 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.8 0 242.8 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.2 12.2 0 0 1 -2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.3 17.3 0 0 0 -8.2 6.3 70.5 70.5 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6 .7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.8 509.4 401 461.3 348 437.4zM124.4 396c-78.7 22 47.9 67.4 148.1 24.5a185.9 185.9 0 0 1 -28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.6 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.4 60.4 0 0 1 -21.1-12.8z"/></svg>
+                    </li>
+                    <li title="PostgreSQL">
                         <!-- pgsql -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="-4 0 264 264" preserveAspectRatio="xMinYMin meet" fill="#000000">
                             <g id="SVGRepo_iconCarrier">
@@ -290,28 +289,16 @@
             <!-- <div class="mt-3 rounded-sm border shadow-sm p-4"> -->
             <div class="mt-5">
                 <ol class="flex flex-col">
-                    <WorkExperience 
-                        datePeriod="2023 - Present" 
-                        workTitle="Associate Applications Developer"
-                        company="Oracle"
-                        description="Resolved customer issues through effective debugging and troubleshooting. Demonstrated proficiency in collaborating within a team and communicating with customers"
-                        techBadges={oracleTechBadges}
-                    />
-                    <WorkExperience 
-                        datePeriod="Jun - Aug 2022" 
-                        workTitle="Software Developer Intern"
-                        company="Trend Micro"
-                        description="I worked with their core tech infrastructure team, where I upgraded one of their internal data visualization tools and deployed it on AWS. I learned how to work with an agile methodology and ensure that the software I develop is production-ready."
-                        techBadges={oracleTechBadges}
-                    />
-                    <WorkExperience 
-                        datePeriod="May - July 2019" 
-                        workTitle="Wordpress Developer"
-                        company="SubicBayNews"
-                        description="Migrated subicbaynews.com to WordPress 5.2 along with its database and plug-ins. Created a user-manual for the website and presented it to SubicBayNews’ owner."
-                        techBadges={oracleTechBadges}
-                        lastElement={true}
-                    />
+                    {#each workExperience as experience}
+                         <WorkExperience 
+                             datePeriod={experience["date"]}
+                             title={experience["title"]}
+                             company={experience["company"]}
+                             companyWebsite={experience["companyWebsite"]}
+                             description={experience["description"]}
+                             tags={experience["tags"]}
+                         />
+                    {/each}
                 </ol>
             </div>
             </Tabs.Content>
@@ -322,9 +309,12 @@
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Academic Achievements</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
-                        <AcademicExperience title="B.S. in Computer Science, achieved in 2023" 
-                            descriptions={["Graduated with with great distinction (Magna cum laude)", 
-                                "Conferred by Saint Louis University (Baguio City, PH)"]}/>
+                        {#each academicExperience["academicAchievements"] as achievement}
+                            <Experience
+                                title={achievement["title"]}
+                                descriptions={achievement["descriptions"]}
+                            />
+                        {/each}
                     </ol>
                 </div>
                 <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
@@ -332,20 +322,12 @@
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Research Work</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
-                        <AcademicExperience 
-                            title="Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)" 
-                            descriptions={["Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.”",
-                                "Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification."]}
-                        />
-                        <AcademicExperience 
-                            title="A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)" 
-                            descriptions={["The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments."]}
-                        />
-                        <AcademicExperience 
-                            title="Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)" 
-                            descriptions={["Accepted for presentation at the International Conference in IT Education (ICITE2023).", 
-                                "Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support."]}
-                        />
+                        {#each academicExperience["researchWork"] as research}
+                            <Experience
+                                title={research["title"]}
+                                descriptions={research["descriptions"]}
+                            />
+                        {/each}
                     </ol>
                 </div>
             </div>
@@ -357,9 +339,12 @@
                         <span class="overflow-auto text-xs font-semibold sm:w-28">2023-2023</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
-                        <AcademicExperience title="Automated Data Extraction and Web Scraping" 
-                            descriptions={["Collaborated with a start-up to construct a database encompassing information on over a hundred thousand companies", 
-                                "Streamlined the data extraction process, seamleassly integrating the acquired information with the client's existing data infrastructure."]}/>
+                        {#each freelanceExperience as freelance}
+                            <Experience
+                                title={freelance["title"]}
+                                descriptions={freelance["descriptions"]}
+                            />
+                        {/each}
                     </ol>
                 </div>
             </div>
@@ -374,25 +359,18 @@
         </div>
         <div>
             <!-- <ol class="section-with-scrollbar flex flex-col gap-6 lg:flex-row lg:overflow-hidden lg:snap-x lg:pb-2 lg:hover:overflow-x-auto"> -->
-            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap lg:items-center">
-                <Project
-                    title="Tictactoe 2"
-                    image={gradientImage}
-                    description="Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
-                    techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
-                />
-                <Project
-                    title="Tictactoe 2"
-                    image={gradientImage}
-                    description="Developed in Golang and  for up to four players feature enables drag their pieces during gameplay, facilitated through WebSocket technology."
-                    techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
-                />
-                <Project
-                    title="Tictactoe 2"
-                    image={gradientImage}
-                    description="Developed in Golang and deployed on AWS, offers a  to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology."
-                    techBadges={["Golang", "SvelteKit", "DevOps", "AWS"]}
-                />
+            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap lg:items-start">
+                {#each featuredProjects as project}
+                    <Project
+                        title={project["title"]} 
+                        image={project["image"]} 
+                        description={project["description"]} 
+                        tags={project["tags"]} 
+                        githubLink={project["githubLink"]} 
+                        liveLink={project["liveLink"]}
+                    />
+                     <!-- content here -->
+                {/each}
                 <ProjectViewMore/>
             </ol>
         </div>
@@ -402,7 +380,7 @@
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Writing</h2>
         </div>
-        <span>Coming soon!</span>
+        <span>Coming soon, my two cents on all things!</span>
     </section>
     </div>
 

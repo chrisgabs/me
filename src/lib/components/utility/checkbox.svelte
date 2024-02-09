@@ -17,7 +17,7 @@
     <Label
         id="terms-label"
         for={label + "-checkbox"}
-        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        class="md:min-w-11 text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
         {label}
     </Label>
