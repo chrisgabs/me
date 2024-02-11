@@ -58,7 +58,11 @@
         "JS/TS",
         "AI"
       ],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/gentoo/1.webp",
+        "/project-images/gentoo/2.webp",
+        "/project-images/gentoo/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
       "liveLink": "",
       "visible": true
@@ -80,7 +84,11 @@
       "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
       "tags": ["Java", "JavaFX", "MySQL", "Sockets"],
       "filterTags": ["Java", "JavaFX", "MySQL", "Sockets", "CRUD"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/textra/1.webp",
+        "/project-images/textra/2.webp",
+        "/project-images/textra/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
       "liveLink": "",
       "visible": true
@@ -102,7 +110,11 @@
       "longDescription": "Visualizes a graph in a radial manner given the graph’s edges and weights. Highlights the edges an algorithm visits while it is running.",
       "tags": ["Java", "Swing", "Visualizer"],
       "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
-      "images": "/project-images/graph/graph1.png",
+      "images": [
+        "/project-images/graph/1.webp",
+        "/project-images/graph/2.webp",
+        "/project-images/graph/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
       "liveLink": "",
       "visible": true
@@ -113,7 +125,11 @@
       "longDescription": "long description",
       "tags": ["Java", "Swing", "Visualizer"],
       "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
-      "images": "/project-images/gradient.jpg",
+      "images": [
+        "/project-images/huffman/1.webp",
+        "/project-images/huffman/2.webp",
+        "/project-images/huffman/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
       "liveLink": "",
       "visible": true
@@ -154,10 +170,14 @@
     {
       "title": "Vaccination Dashboard",
       "shortDescription": "Data visualization from scratch",
-      "longDescription": "",
+      "longDescription": "Created back when I was still studying vanila JS and CSS.",
       "tags": ["JS", "HTML", "CSS"],
       "filterTags": ["JS", "HTML", "CSS"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/vac-dashboard/1.webp",
+        "/project-images/vac-dashboard/2.webp",
+        "/project-images/vac-dashboard/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
       "liveLink": "",
       "visible": true
@@ -168,7 +188,11 @@
       "longDescription": "First project that I was proud of :D Implemented the shunting yard algorithm for this calculator. Made this in my first year of taking comptuer science degree.",
       "tags": ["Java", "Swing"],
       "filterTags": ["Java", "Swing", "Algorithms"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/calculator/1.webp",
+        "/project-images/calculator/2.webp",
+        "/project-images/calculator/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
       "liveLink": "",
       "visible": true
@@ -181,7 +205,11 @@
       "longDescription": "",
       "tags": ["SvelteKit", "Supabase", "TS"],
       "filterTags": ["SvelteKit", "JS/TS", "Supabase", "CRUD"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/vac-dashboard/1.webp",
+        "/project-images/vac-dashboard/2.webp",
+        "/project-images/vac-dashboard/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
       "liveLink": "",
       "visible": true

@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Christian Bayquen - Projects</title> 
+</svelte:head>
+
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
     import ProjectSmall from '$lib/components/project-collapsible-element/+page.svelte';
@@ -144,7 +148,7 @@
                         title={project["title"]} 
                         shortDescription={project["shortDescription"]}
                         longDescription={project["longDescription"]}
-                        images={["/project-images/graph/graph1.png", "/project-images/graph/graph2.png", "/project-images/graph/graph3.png"]}
+                        images={project["images"]}
                         tags={project["tags"]}
                         githubLink={project["githubLink"]}
                         liveLink={project["liveLink"]}
