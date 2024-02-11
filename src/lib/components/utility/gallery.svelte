@@ -7,11 +7,11 @@
 	export let className:string = "";
 	export { className as class };
 
-    console.log(className);
-    
+
     let api: CarouselAPI;
     let apiOptions = {
         loop: true,
+        active: images.length > 1,
     }
 
     let imageExpanded:boolean = false;
