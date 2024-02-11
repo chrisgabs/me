@@ -363,7 +363,7 @@
                 {#each featuredProjects as project}
                     <Project
                         title={project["title"]} 
-                        image={project["image"]} 
+                        images={project["images"]} 
                         description={project["description"]} 
                         tags={project["tags"]} 
                         githubLink={project["githubLink"]} 

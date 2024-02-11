@@ -144,7 +144,7 @@
                         title={project["title"]} 
                         shortDescription={project["shortDescription"]}
                         longDescription={project["longDescription"]}
-                        image={project["image"]}
+                        images={["/project-images/graph/graph1.png", "/project-images/graph/graph2.png", "/project-images/graph/graph3.png"]}
                         tags={project["tags"]}
                         githubLink={project["githubLink"]}
                         liveLink={project["liveLink"]}
