@@ -27,7 +27,7 @@
     <Carousel.Content>
         {#each images as image}
         <Carousel.Item class="aspect-w-3 aspect-h-1 overflow-hidden transition-all">
-            <img src="{image}" alt="asdasd" class="object-cover rounded-sm w-full h-full"/>
+            <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
         </Carousel.Item>
         {/each}
     </Carousel.Content>
@@ -55,7 +55,7 @@
             <Carousel.Content class="">
                 {#each images as image}
                 <Carousel.Item class="aspect-w-16 aspect-h-9 overflow-hidden transition-all">
-                    <img src="{image}" alt="asdasd" class="object-cover w-full h-full "/>
+                    <img src="{image}" alt={image} class="object-cover w-full h-full "/>
                 </Carousel.Item>
                 {/each}
             </Carousel.Content>

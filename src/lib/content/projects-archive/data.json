@@ -29,7 +29,7 @@
         "JS/TS",
         "Sockets"
       ],
-      "images": "/project-images/gradient.jpg",
+      "images": ["/project-images/gradient.jpg"],
       "githubLink": "https://github.com/chrisgabs/tictactoe2",
       "liveLink": "",
       "visible": true
@@ -69,11 +69,13 @@
     },
     {
       "title": "Me",
-      "shortDescription": "This current personal website",
-      "longDescription": "My personalized mark on the internet serving as my online resume and dictionary of sorts",
+      "shortDescription": "This personal website",
+      "longDescription": "My personalized mark on the internet serving as a documentation of my career and online resume.",
       "tags": ["SvelteKit", "TS", "Vercel"],
       "filterTags": ["SvelteKit", "TS", "Vercel"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/me/1.webp"
+      ],
       "githubLink": "",
       "liveLink": "",
       "visible": true
@@ -99,7 +101,9 @@
       "longDescription": "",
       "tags": ["Python", "Whisper", "FastAPI", "SvelteKit"],
       "filterTags": ["Python", "Whisper", "FastAPI", "SvelteKit", "AI"],
-      "images": "/project-images/bird.jpg",
+      "images": [
+        "/project-images/gradient.jpg"
+      ],
       "githubLink": "",
       "liveLink": "",
       "visible": true
@@ -114,6 +118,30 @@
         "/project-images/graph/1.webp",
         "/project-images/graph/2.webp",
         "/project-images/graph/3.webp"
+      ],
+      "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Anagram Guessing Game",
+      "shortDescription": "Guess the word given a random sequence of letters",
+      "longDescription": "This game was created in compliance with the Common Object Request Broker Architecture (CORBA) enabling a python client to directly communicate with a java server.",
+      "tags": [
+        "Python",
+        "Java",
+        "CORBA"
+      ],
+      "filterTags": [
+        "Python",
+        "Java",
+        "CORBA"
+      ],
+      "images": [
+        "/project-images/corba/1.webp",
+        "/project-images/corba/2.webp",
+        "/project-images/corba/3.webp",
+        "/project-images/corba/4.webp"
       ],
       "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
       "liveLink": "",
@@ -138,9 +166,13 @@
       "title": "Events management system",
       "shortDescription": "CRUD application to manage your events",
       "longDescription": "Events management system with PHP and Express backend integrated with a MySQL database.",
-      "tags": ["JS", "Express", "PHP", "MySQL", "CRUD"],
-      "filterTags": ["JS/TS", "Express", "PHP", "MySQL", "CRUD"],
-      "images": "/project-images/bird.jpg",
+      "tags": ["JS", "Express", "PHP", "MySQL", "CRUD", "AWS"],
+      "filterTags": ["JS/TS", "Express", "PHP", "MySQL", "CRUD", "AWS"],
+      "images": [
+        "/project-images/events/1.webp",
+        "/project-images/events/2.webp",
+        "/project-images/events/3.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
       "liveLink": "",
       "visible": true
@@ -151,7 +183,11 @@
       "longDescription": "Bracketing methods you can use: Bisection, False Position, Newton Rhapson, Secant, Simple Fixed Point Iteration, Non-Linear.\n Built with Flask hosted on Heroku",
       "tags": ["Python", "Flask", "Heroku"],
       "filterTags": ["Python", "Flask", "Heroku", "Algorithms"],
-      "images": "/project-images/gradient.jpg",
+      "images": [
+        "/project-images/roots/1.webp",
+        "/project-images/roots/2.webp",
+        "/project-images/roots/3.webp"
+      ],
       "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
       "liveLink": "",
       "visible": true
@@ -160,9 +196,16 @@
       "title": "Volunteer management system",
       "shortDescription": "CRUD application to manage events and volunteers",
       "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
-      "tags": ["Java", "JavaFX", "MySQL", "AWS", "CRUD"],
-      "filterTags": ["Java", "JavaFX", "MySQL", "AWS", "CRUD"],
-      "images": "/project-images/bird.jpg",
+      "tags": ["Java", "JavaFX", "MySQL", "CRUD"],
+      "filterTags": ["Java", "JavaFX", "MySQL", "CRUD"],
+      "images": [
+        "/project-images/volunteer/1.webp",
+        "/project-images/volunteer/2.webp",
+        "/project-images/volunteer/3.webp",
+        "/project-images/volunteer/4.webp",
+        "/project-images/volunteer/5.webp",
+        "/project-images/volunteer/6.webp"
+      ],
       "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
       "liveLink": "",
       "visible": true
