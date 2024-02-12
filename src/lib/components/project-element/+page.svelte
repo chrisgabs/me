@@ -23,7 +23,7 @@
                 </span>
             </h3>
 
-            <Gallery images={images} class="mb-2"/>
+            <Gallery images={images} class="mb-2 rounded-sm"/>
 
             <ul class="flex gap-2 mb-3 flex-wrap">
                 {#each tags as tag}

@@ -11,7 +11,11 @@
     "title": "Gentoo",
     "description": "A twitter clone integrated with an internally developed BERT hate speech classifier. Employs multi-task text classification to assess hatefulness and targeted communities. Enables administrators to moderate the platform using our developed AI model.",
     "tags": ["Golang", "Python", "FastAPI", "PyTorch", "NextJS", "PostgreSQL"],
-    "images": ["/project-images/gradient.jpg"],
+    "images": [
+      "/project-images/gentoo/1.webp",
+      "/project-images/gentoo/2.webp",
+      "/project-images/gentoo/3.webp"
+    ],
     "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
     "liveLink": ""
   },
@@ -19,7 +23,11 @@
     "title": "Textra",
     "description": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
     "tags": ["Java", "JavaFX", "MySQL", "Sockets"],
-    "images": ["/project-images/gradient.jpg"],
+    "images": [
+      "/project-images/textra/1.webp",
+      "/project-images/textra/2.webp",
+      "/project-images/textra/3.webp"
+    ],
     "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
     "liveLink": ""
   }
