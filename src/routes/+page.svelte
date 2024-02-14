@@ -11,7 +11,6 @@
     import Project from "$lib/components/project-element/+page.svelte";
     import ProjectViewMore from "$lib/components/projects-showmore-element/+page.svelte";
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-    import gradientImage from '$lib/assets/project-images/gradient.jpg';
     import { Separator } from "$lib/components/ui/separator";
     import { onMount } from "svelte";
     import featuredProjects from "$lib/content/main-page/projects-showcase/data.json"
@@ -270,7 +269,7 @@
         </div>
         <div class="block">
             <figure title="hello :D" class="float-right mb-1 ml-5 mt-1 lg:ml-6 ">
-                <img src="/about/me_cropped.jpg" alt={"me"} class="rounded-sm border border-slate-700 h-40 w-40 grayscale-[30%] hover:grayscale-[10%] transition-all duration-300"/>
+                <img src="/about/me.webp" alt={"me"} class="rounded-sm border border-slate-700 h-40 w-40 grayscale-[30%] hover:grayscale-[10%] transition-all duration-300"/>
             </figure>
             <p class="mb-4 text-justify">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
             <p class="mb-4 text-justify">Since printing out my first Hello World in the command line five years ago, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>

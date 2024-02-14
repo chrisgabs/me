@@ -18,8 +18,8 @@
   "data": [
     {
       "title": "Tictactoe",
-      "shortDescription": "Four player tictactoe where you take each other's pieces",
-      "longDescription": "Developed in Golang and deployed on AWS, offers a multiplayer experience for up to four players concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
+      "shortDescription": "Tictactoe where you place over each other's moves",
+      "longDescription": "Developed in Golang and deployed on AWS, offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
       "tags": ["Golang", "JS", "SvelteKit", "DevOps", "AWS"],
       "filterTags": [
         "Golang",
@@ -29,7 +29,13 @@
         "JS/TS",
         "Sockets"
       ],
-      "images": ["/project-images/gradient.jpg"],
+      "images": [
+        "/project-images/tictactoe/1.mp4",
+        "/project-images/tictactoe/2.webp",
+        "/project-images/tictactoe/3.webp",
+        "/project-images/tictactoe/4.webp",
+        "/project-images/tictactoe/5.webp"
+      ],
       "githubLink": "https://github.com/chrisgabs/tictactoe2",
       "liveLink": "",
       "visible": true
@@ -68,19 +74,6 @@
       "visible": true
     },
     {
-      "title": "Me",
-      "shortDescription": "This personal website",
-      "longDescription": "My personalized mark on the internet serving as a documentation of my career and online resume.",
-      "tags": ["SvelteKit", "TS", "Vercel"],
-      "filterTags": ["SvelteKit", "TS", "Vercel"],
-      "images": [
-        "/project-images/me/1.webp"
-      ],
-      "githubLink": "",
-      "liveLink": "",
-      "visible": true
-    },
-    {
       "title": "Textra",
       "shortDescription": "Desktop messaging application",
       "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
@@ -95,19 +88,7 @@
       "liveLink": "",
       "visible": true
     },
-    {
-      "title": "Scribe",
-      "shortDescription": "Generate slides and transcription from a lecture video",
-      "longDescription": "",
-      "tags": ["Python", "Whisper", "FastAPI", "SvelteKit"],
-      "filterTags": ["Python", "Whisper", "FastAPI", "SvelteKit", "AI"],
-      "images": [
-        "/project-images/gradient.jpg"
-      ],
-      "githubLink": "",
-      "liveLink": "",
-      "visible": true
-    },
+
     {
       "title": "Graph algorithms visualizer",
       "shortDescription": "Dijkstra's path finding, Depth-First Search, Breadth-First Search",
@@ -115,8 +96,8 @@
       "tags": ["Java", "Swing", "Visualizer"],
       "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
       "images": [
+        "/project-images/graph/2.webm",
         "/project-images/graph/1.webp",
-        "/project-images/graph/2.webp",
         "/project-images/graph/3.webp"
       ],
       "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
@@ -124,26 +105,20 @@
       "visible": true
     },
     {
-      "title": "Anagram Guessing Game",
-      "shortDescription": "Guess the word given a random sequence of letters",
-      "longDescription": "This game was created in compliance with the Common Object Request Broker Architecture (CORBA) enabling a python client to directly communicate with a java server.",
-      "tags": [
-        "Python",
-        "Java",
-        "CORBA"
-      ],
-      "filterTags": [
-        "Python",
-        "Java",
-        "CORBA"
-      ],
+      "title": "Volunteer management system",
+      "shortDescription": "CRUD application to manage events and volunteers",
+      "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
+      "tags": ["Java", "JavaFX", "MySQL", "CRUD"],
+      "filterTags": ["Java", "JavaFX", "MySQL", "CRUD"],
       "images": [
-        "/project-images/corba/1.webp",
-        "/project-images/corba/2.webp",
-        "/project-images/corba/3.webp",
-        "/project-images/corba/4.webp"
+        "/project-images/volunteer/1.webp",
+        "/project-images/volunteer/2.webp",
+        "/project-images/volunteer/3.webp",
+        "/project-images/volunteer/4.webp",
+        "/project-images/volunteer/5.webp",
+        "/project-images/volunteer/6.webp"
       ],
-      "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+      "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
       "liveLink": "",
       "visible": true
     },
@@ -178,6 +153,44 @@
       "visible": true
     },
     {
+      "title": "Anagram Guessing Game",
+      "shortDescription": "Guess the word given a random sequence of letters",
+      "longDescription": "This game was created in compliance with the Common Object Request Broker Architecture (CORBA) enabling a python client to directly communicate with a java server.",
+      "tags": ["Python", "Java", "CORBA"],
+      "filterTags": ["Python", "Java", "CORBA"],
+      "images": [
+        "/project-images/corba/1.webp",
+        "/project-images/corba/2.webp",
+        "/project-images/corba/3.webp",
+        "/project-images/corba/4.webp"
+      ],
+      "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Me",
+      "shortDescription": "This personal website",
+      "longDescription": "My personalized mark on the internet serving as a documentation of my career and online resume.",
+      "tags": ["SvelteKit", "TS", "Vercel"],
+      "filterTags": ["SvelteKit", "TS", "Vercel"],
+      "images": ["/project-images/me/1.webp"],
+      "githubLink": "",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Scribe",
+      "shortDescription": "Generate slides and transcription from a lecture video",
+      "longDescription": "A project that is very much still a work in progress.",
+      "tags": ["Python", "Whisper", "FastAPI", "SvelteKit"],
+      "filterTags": ["Python", "Whisper", "FastAPI", "SvelteKit", "AI"],
+      "images": ["/project-images/gradient.webp"],
+      "githubLink": "",
+      "liveLink": "",
+      "visible": true
+    },
+    {
       "title": "Roots calculator",
       "shortDescription": "Approximate the roots of an equation using bracketing methods",
       "longDescription": "Bracketing methods you can use: Bisection, False Position, Newton Rhapson, Secant, Simple Fixed Point Iteration, Non-Linear.\n Built with Flask hosted on Heroku",
@@ -189,24 +202,6 @@
         "/project-images/roots/3.webp"
       ],
       "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
-      "liveLink": "",
-      "visible": true
-    },
-    {
-      "title": "Volunteer management system",
-      "shortDescription": "CRUD application to manage events and volunteers",
-      "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
-      "tags": ["Java", "JavaFX", "MySQL", "CRUD"],
-      "filterTags": ["Java", "JavaFX", "MySQL", "CRUD"],
-      "images": [
-        "/project-images/volunteer/1.webp",
-        "/project-images/volunteer/2.webp",
-        "/project-images/volunteer/3.webp",
-        "/project-images/volunteer/4.webp",
-        "/project-images/volunteer/5.webp",
-        "/project-images/volunteer/6.webp"
-      ],
-      "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
       "liveLink": "",
       "visible": true
     },

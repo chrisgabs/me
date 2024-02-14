@@ -4,7 +4,7 @@
     "title": "Associate Applications Developer",
     "company": "Oracle",
     "companyWebsite": "https://www.oracle.com/ph/",
-    "description": "Resolved customer issues through effective debugging and troubleshooting. Demonstrated proficiency in collaborating within a team and communicating with customers",
+    "description": "Developed and maintained an enterprise product lifecycle management application, effectively addressing customer concerns. Demonstrated proficiency in collaborating within a team and communicating with our customers.",
     "tags": ["Java", "PLSQL", "Agile PLM", "WebLogic"],
     "lastElement": false
   },
@@ -13,7 +13,7 @@
     "title": "Software Developer Intern",
     "company": "Trend Micro",
     "companyWebsite": "https://www.trendmicro.com/",
-    "description": "I worked with their core tech infrastructure team, where I upgraded one of their internal data visualization tools and deployed it on AWS. I learned how to work with an agile methodology and ensure that the software I develop is production-ready.",
+    "description": "Worked with the core tech infrastructure team to upgrade an internal data visualization tool, leveraging AWS for deployment. Embraced Agile methodologies to enhance efficiency and ensure the seamless transition of software into production-ready status.",
     "tags": ["Python", "AWS", "Github Actions", "Apache Superset"],
     "lastElement": false
   },
@@ -22,7 +22,7 @@
     "title": "Wordpress Developer",
     "company": "SubicBayNews",
     "companyWebsite": "https://subicbaynews.com/",
-    "description": "Migrated subicbaynews.com to WordPress 5.2 along with its database and plug-ins. Created a user-manual for the website and presented it to SubicBayNews’ owner.",
+    "description": "Successfully migrated of subicbaynews.com to WordPress 5.2, migrating its database and implementing essential plug-ins for enhanced functionality and user engagement. Created a user-manual for the website and presented it to SubicBayNews' owner.",
     "tags": ["Wordpress", "PHP"],
     "lastElement": true
   }

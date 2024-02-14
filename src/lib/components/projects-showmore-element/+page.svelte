@@ -14,7 +14,7 @@
             <img src="/project-images/volunteer/1.webp" alt="title" class="object-cover w-full h-full"/>
         </div>
         <div class="absolute left-1 top-3 overflow-hidden border-2 border-slate-700 w-72 h-12 grayscale-[50%] group-hover:grayscale-0 transition-all duration-300 origin-bottom group-hover:rotate-2 group-hover:-translate-y-5">
-            <img src="/project-images/graph/2.webp" alt="title" class="object-cover w-full h-full"/>
+            <img src="/project-images/vac-dashboard/1.webp" alt="title" class="object-cover w-full h-full"/>
         </div>
     </div>
 

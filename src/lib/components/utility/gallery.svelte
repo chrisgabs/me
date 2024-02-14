@@ -19,15 +19,31 @@
 
     let dialogOpened:boolean = false;
 
+    // Attempt to fix frozen scroll on mobile when dialog is closed by pressing #dialog-toggle.
+    // $: {
+    //     let toggle:HTMLButtonElement = document.getElementById("dialog-toggle") as HTMLButtonElement;
+    //     if (toggle !== null && dialogOpened) {
+    //         toggle.disabled = true;
+    //         setTimeout(()=> {
+    //             console.log("pressable")
+    //             toggle.disabled = false;
+    //         }, 1000);
+    //     }
+    // }
+
 </script>
 
-<button on:click={(e) => {dialogOpened = !dialogOpened}} class={className}>
+<button id="dialog-toggle" on:click={() => {dialogOpened = !dialogOpened}} class={className}>
 <Carousel.Root bind:api opts={apiOptions} class="group border border-slate-700 rounded-sm" >
     
     <Carousel.Content>
         {#each images as image}
         <Carousel.Item class="aspect-w-3 aspect-h-1 overflow-hidden transition-all">
-            <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
+            {#if image.split(".")[image.split(".").length-1] === "webp"}
+                 <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
+            {:else}
+                 <video autoplay muted src="{image}" class="object-cover rounded-sm w-full h-full"/>
+            {/if}
         </Carousel.Item>
         {/each}
     </Carousel.Content>
@@ -55,7 +71,11 @@
             <Carousel.Content class="">
                 {#each images as image}
                 <Carousel.Item class="aspect-w-16 aspect-h-9 overflow-hidden transition-all">
-                    <img src="{image}" alt={image} class="object-cover w-full h-full "/>
+                    {#if image.split(".")[image.split(".").length-1] === "webp"}
+                        <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
+                    {:else}
+                        <video autoplay muted loop src="{image}" class="object-cover rounded-sm w-full h-full"/>
+                    {/if}
                 </Carousel.Item>
                 {/each}
             </Carousel.Content>
