@@ -5,7 +5,8 @@
       "descriptions": [
         "Graduated with with great distinction (Magna cum laude)",
         "Conferred by Saint Louis University (Baguio City, PH)"
-      ]
+      ],
+      "link": "https://www.slu.edu.ph/"
     }
   ],
   "researchWork": [
@@ -14,20 +15,23 @@
       "descriptions": [
         "Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.”",
         "Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification."
-      ]
+      ],
+      "link": "https://drive.google.com/file/d/1Rd3-cQgpCzxOvZ_D3MD1n9QL85T0NnFL/view?usp=sharing"
     },
     {
       "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
       "descriptions": [
         "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments."
-      ]
+      ],
+      "link": "https://drive.google.com/file/d/1Cdlp6OPGYly_OmYrnLY8UAdu11pTSbx4/view?usp=sharing"
     },
     {
       "title": "Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)",
       "descriptions": [
         "Accepted for presentation at the International Conference in IT Education (ICITE2023).",
         "Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support."
-      ]
+      ],
+      "link": "https://drive.google.com/file/d/1BTL9-er0tnToFYi3wlqAspClYw1i9S0h/view?usp=sharing"
     }
   ]
 }

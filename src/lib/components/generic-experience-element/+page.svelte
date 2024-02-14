@@ -1,7 +1,7 @@
 <script lang="ts">
     export let title:string = "title";
     export let descriptions:string[] = [];
-    export let link:string = "/";
+    export let link:string = "";
 </script>
 
 <li>
@@ -9,7 +9,7 @@
         <div>
             <h3 class="mb-2 font-bold text-lg leading-normal sm:text-xl max-w-md md:text-lg">
                 {#if link !== ""}
-                    <a href={link} class="inline-block after:inline-block after:-mr-4 underline-offset-4 link cursor-pointer hover:underline">
+                    <a href={link} target="_blank" class="inline-block after:inline-block after:-mr-4 underline-offset-4 link cursor-pointer hover:underline">
                         {title}
                     </a>
                 {:else}

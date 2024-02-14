@@ -316,6 +316,7 @@
                             <Experience
                                 title={achievement["title"]}
                                 descriptions={achievement["descriptions"]}
+                                link={achievement["link"]}
                             />
                         {/each}
                     </ol>
@@ -329,6 +330,7 @@
                             <Experience
                                 title={research["title"]}
                                 descriptions={research["descriptions"]}
+                                link={research["link"]}
                             />
                         {/each}
                     </ol>
@@ -339,13 +341,14 @@
             <div class="flex flex-col gap-4 mt-5">
                 <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
                     <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
-                        <span class="overflow-auto text-xs font-semibold sm:w-28">2023 - Present</span>
+                        <span class="overflow-auto text-xs font-semibold sm:w-28">2022 - 2023</span>
                     </div>
                     <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
                         {#each freelanceExperience as freelance}
                             <Experience
                                 title={freelance["title"]}
                                 descriptions={freelance["descriptions"]}
+                                link={freelance["link"]}
                             />
                         {/each}
                     </ol>
