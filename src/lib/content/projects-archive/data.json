@@ -36,7 +36,7 @@
         "/project-images/tictactoe/4.webp",
         "/project-images/tictactoe/5.webp"
       ],
-      "githubLink": "https://github.com/chrisgabs/tictactoe2",
+      "githubLink": "https://github.com/chrisgabs/tictactoe2-backend",
       "liveLink": "",
       "visible": true
     },
@@ -164,19 +164,19 @@
         "/project-images/corba/3.webp",
         "/project-images/corba/4.webp"
       ],
-      "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
+      "githubLink": "https://github.com/ABCD-EDU/python-java-corba-application",
       "liveLink": "",
       "visible": true
     },
     {
       "title": "Me",
-      "shortDescription": "This personal website",
-      "longDescription": "My personalized mark on the internet serving as a documentation of my career and online resume.",
+      "shortDescription": "My personalized footprint on the internet",
+      "longDescription": "My personalized mark footprint the internet serving as a self-documentation of my career, showcase for my projects, and where I express my thoughts and insights from my professional endeavors.",
       "tags": ["SvelteKit", "TS", "Vercel"],
       "filterTags": ["SvelteKit", "TS", "Vercel"],
       "images": ["/project-images/me/1.webp"],
-      "githubLink": "",
-      "liveLink": "",
+      "githubLink": "https://github.com/chrisgabs/me",
+      "liveLink": "https://cbayquen.com",
       "visible": true
     },
     {
@@ -248,7 +248,7 @@
         "/project-images/vac-dashboard/2.webp",
         "/project-images/vac-dashboard/3.webp"
       ],
-      "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
+      "githubLink": "https://github.com/chrisgabs/calculator",
       "liveLink": "",
       "visible": true
     }
