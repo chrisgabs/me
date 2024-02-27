@@ -126,7 +126,7 @@
 
 <div class="flex flex-col w-fit h-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
 
-    <header class="flex h-dvh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
+    <header class="flex h-svh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="heading">
