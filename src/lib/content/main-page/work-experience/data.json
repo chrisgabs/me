@@ -22,8 +22,8 @@
     "title": "Wordpress Developer",
     "company": "SubicBayNews",
     "companyWebsite": "https://subicbaynews.com/",
-    "description": "Successfully migrated of subicbaynews.com to WordPress 5.2, migrating its database and implementing essential plug-ins for enhanced functionality and user engagement. Created a user-manual for the website and presented it to SubicBayNews' owner.",
-    "tags": ["Wordpress", "PHP"],
+    "description": "Successfully migrated of subicbaynews.com to WordPress 5.2, migrating its database and implementing essential plug-ins for enhanced functionality and user engagement.",
+    "tags": ["Wordpress"],
     "lastElement": true
   }
 ]
