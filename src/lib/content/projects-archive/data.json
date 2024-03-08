@@ -17,6 +17,27 @@
   },
   "data": [
     {
+      "title": "PH Tech News Digest",
+      "shortDescription": "Aggregation of tech news sources in the Philippines",
+      "longDescription": "Provides an updated single location to check science, technology, and business related news from Philippines news sources. Automatically updates its database of articles and provides its users with the ability to filter the news in the news feed. ",
+      "tags": ["Golang", "JS", "Python", "SvelteKit", "AWS", "Fly.io", "DevOps"],
+      "filterTags": [
+        "Golang",
+        "SvelteKit",
+        "DevOps",
+        "Python",
+        "AWS",
+        "JS/TS",
+        "Sockets"
+      ],
+      "images": [
+        "/project-images/news/1.webp"
+      ],
+      "githubLink": "",
+      "liveLink": "https://news.cbayquen.com",
+      "visible": true
+    },
+    {
       "title": "Tictactoe",
       "shortDescription": "Tictactoe where you place over each other's moves",
       "longDescription": "Developed in Golang and deployed on AWS, offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
