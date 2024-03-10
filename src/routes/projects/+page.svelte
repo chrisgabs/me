@@ -11,7 +11,7 @@
     import projectsArchive from "$lib/content/projects-archive/data.json";
     import FilterOption from "$lib/components/utility/checkbox.svelte";
 
-    let expanded:boolean = false;
+    let expanded:boolean = true;
     let filtersPermanentlyOpen:boolean = false;
     let filterIsOpen:boolean = false;
 
