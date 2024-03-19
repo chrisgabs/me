@@ -38,7 +38,7 @@
     
     <Carousel.Content>
         {#each images as image}
-        <Carousel.Item class="aspect-w-3 aspect-h-1 overflow-hidden transition-all">
+        <Carousel.Item class="flex items-center justify-center aspect-w-3 aspect-h-1 overflow-hidden transition-all">
             {#if image.split(".")[image.split(".").length-1] === "webp"}
                  <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
             {:else}

@@ -14,7 +14,7 @@
 </script>
 
 <li>
-    <div class="flex flex-col justify-between rounded-sm p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl md:min-h-[28rem] lg:max-w-xs lg:snap-center" >
+    <div class="flex flex-col justify-between rounded-sm p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl md:min-h-[29rem] lg:max-w-xs lg:snap-center" >
     <!-- <div class="flex flex-col gap-1 p-4 border shadow-md max-w-xl lg:max-w-xs lg:snap-center"> -->
         <div class="flex flex-col gap-1">
             <h3 class="mb-3">
