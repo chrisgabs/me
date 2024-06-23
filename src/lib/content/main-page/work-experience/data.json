@@ -1,6 +1,15 @@
 [
   {
-    "date": "2023 - Present",
+    "date": "May 2024 - Present",
+    "title": "Junior Backend Software Engineer",
+    "company": "Angkas",
+    "companyWebsite": "https://www.angkas.com/",
+    "description": "",
+    "tags": ["Golang", "GCP", "PLSQL"],
+    "lastElement": false
+  },
+  {
+    "date": "June 2023 - May 2024",
     "title": "Associate Applications Developer",
     "company": "Oracle",
     "companyWebsite": "https://www.oracle.com/ph/",

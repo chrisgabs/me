@@ -144,7 +144,7 @@
                 </div>
                 <!-- <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl"><ruby>Christian <rp>(</rp><rt>sdfasdfklj</rt><rp>)</rp>Bayquen</ruby></h1> -->
                 <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-4xl">Christian Bayquen</h1>
-                <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Applications Engineer at Oracle</h2>
+                <h2 class="mt-2 text-lg font-medium tracking-tight sm:text-xl">Software Enginner at Angkas</h2>
                 <p class="mt-8 max-w-xs leading-normal">I love automation, problem solving, and building meaningful applications with:</p>
                 <ul class="flex mt-5 gap-4">
                     <li title="Golang">
@@ -271,7 +271,8 @@
             <figure title="hello :D" class="float-right mb-1 ml-5 mt-1 lg:ml-6 ">
                 <img src="/about/me.webp" alt={"me"} class="rounded-sm border border-slate-700 h-40 w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 grayscale-[30%] hover:grayscale-[10%] transition-all duration-300"/>
             </figure>
-            <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p>
+            <!-- <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p> -->
+            <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself building innovative and scalable software solutions to improve transportation and create job opporunities for the Filipino people.</p>
             <p class="mb-4 text-justify leading-relaxed">Since printing out my first Hello World in the command line five years ago, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
             <p class="mb-4 text-justify leading-relaxed">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
         </div>
