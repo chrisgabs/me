@@ -2,7 +2,7 @@
   {
     "title": "Tictactoe",
     "description": "Developed in Golang and deployed on AWS, offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
-    "tags": ["Golang", "SvelteKit", "DevOps", "AWS"],
+    "tags": ["Golang", "SvelteKit", "AWS"],
     "images": [
       "/project-images/tictactoe/1.mp4",
       "/project-images/tictactoe/2.webp",

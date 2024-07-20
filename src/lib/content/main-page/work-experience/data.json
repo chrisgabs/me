@@ -5,7 +5,7 @@
     "company": "Angkas",
     "companyWebsite": "https://www.angkas.com/",
     "description": "",
-    "tags": ["Golang", "GCP", "PSQL"],
+    "tags": ["Golang", "GCP"],
     "lastElement": false
   },
   {
@@ -23,7 +23,7 @@
     "company": "Trend Micro",
     "companyWebsite": "https://www.trendmicro.com/",
     "description": "Worked with the core tech infrastructure team to upgrade an internal data visualization tool, leveraging AWS for deployment. Embraced Agile methodologies to enhance efficiency and ensure the seamless transition of software into production-ready status.",
-    "tags": ["Python", "AWS", "Github Actions", "Apache Superset"],
+    "tags": ["Python", "AWS", "Apache Superset"],
     "lastElement": false
   },
   {
