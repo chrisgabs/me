@@ -4,7 +4,7 @@
     "title": "Junior Backend Software Engineer",
     "company": "Angkas",
     "companyWebsite": "https://www.angkas.com/",
-    "description": "",
+    "description": "Build and maintain scalable backend systems for the leading transportation platform in the Philippines to support thousands of trips created per minute. Collaborate on designing and deploying microservices and event-driven architectures, ensuring high availability and reliability for Angkas’ services.",
     "tags": ["Golang", "GCP"],
     "lastElement": false
   },
