@@ -39,7 +39,7 @@
     {
       "title": "Tictactoe",
       "shortDescription": "Tictactoe but you place over each other's pieces",
-      "longDescription": "Developed in Golang and deployed on AWS, offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
+      "longDescription": "Developed in Golang and deployed on AWS, the application offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
       "tags": ["Golang", "JS", "SvelteKit", "AWS"],
       "filterTags": [
         "Golang",
@@ -144,7 +144,7 @@
     {
       "title": "Huffman tree visualizer",
       "shortDescription": "Visualize the step by step process of the huffman compression algorithm",
-      "longDescription": "long description",
+      "longDescription": "",
       "tags": ["Java", "Swing", "Visualizer"],
       "filterTags": ["Java", "Swing", "Visualizer", "Algorithms"],
       "images": [
@@ -174,7 +174,7 @@
     {
       "title": "Anagram Guessing Game",
       "shortDescription": "Guess the word given a random sequence of letters",
-      "longDescription": "This game was created in compliance with the Common Object Request Broker Architecture (CORBA) enabling a python client to directly communicate with a java server.",
+      "longDescription": "This game was created in compliance with the Common Object Request Broker Architecture (CORBA), enabling a python client to directly communicate with a java server.",
       "tags": ["Python", "Java", "CORBA"],
       "filterTags": ["Python", "Java", "CORBA"],
       "images": [
@@ -242,7 +242,7 @@
     {
       "title": "Calculator",
       "shortDescription": "Simple & scientific calculator",
-      "longDescription": "First project that I was proud of :D Implemented the shunting yard algorithm for this calculator. Made this in my first year of taking comptuer science degree.",
+      "longDescription": "First project that I was proud of :D Implemented the shunting yard algorithm for this calculator. Made this in my first year of taking computer science degree.",
       "tags": ["Java", "Swing"],
       "filterTags": ["Java", "Swing", "Algorithms"],
       "images": [
