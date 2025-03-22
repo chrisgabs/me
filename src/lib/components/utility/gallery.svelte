@@ -6,7 +6,7 @@
     import { fade } from "svelte/transition";
 
     export let images:string[] = [];
-
+    export let galleryIsExpandable:boolean = true;
 	export let className:string = "";
 	export { className as class };
 
@@ -31,15 +31,21 @@
     //     }
     // }
 
+    function handleClick() {
+        if (galleryIsExpandable) {
+            dialogOpened = !dialogOpened;
+        }
+    }
+
 </script>
 
-<button id="dialog-toggle" on:click={() => {dialogOpened = !dialogOpened}} class={className}>
-<Carousel.Root bind:api opts={apiOptions} class="group border border-slate-700 rounded-sm" >
+<button id="dialog-toggle" on:click={handleClick} class={className}>
+<Carousel.Root bind:api opts={apiOptions} class="group border border-slate-700 rounded-sm {galleryIsExpandable ? '' : 'cursor-default'}" >
     
     <Carousel.Content>
         {#each images as image}
         <Carousel.Item class="flex items-center justify-center aspect-w-3 aspect-h-1 overflow-hidden transition-all">
-            {#if image.split(".")[image.split(".").length-1] === "webp"}
+            {#if image.split(".")[image.split(".").length-1] === "webp" || image.split(".")[image.split(".").length-1] === "png"}
                  <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
             {:else}
                  <video autoplay muted src="{image}" class="object-cover rounded-sm w-full h-full"/>
@@ -48,9 +54,11 @@
         {/each}
     </Carousel.Content>
 
-    <div class="absolute bottom-3 right-3 bg-white p-1 border border-slate-700 rounded-md opacity-15 group-hover:opacity-85 transition-all duration-300" >
-        <svg class="lucide lucide-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8"/><path d="M3 16.2V21m0 0h4.8M3 21l6-6"/><path d="M21 7.8V3m0 0h-4.8M21 3l-6 6"/><path d="M3 7.8V3m0 0h4.8M3 3l6 6"/></svg>
-    </div>
+    {#if galleryIsExpandable}
+        <div class="absolute bottom-3 right-3 bg-white p-1 border border-slate-700 rounded-md opacity-15 group-hover:opacity-85 transition-all duration-300" >
+            <svg class="lucide lucide-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8"/><path d="M3 16.2V21m0 0h4.8M3 21l6-6"/><path d="M21 7.8V3m0 0h-4.8M21 3l-6 6"/><path d="M3 7.8V3m0 0h4.8M3 3l6 6"/></svg>
+        </div>
+    {/if}
 </Carousel.Root>
 </button>
 
@@ -71,7 +79,7 @@
             <Carousel.Content class="">
                 {#each images as image}
                 <Carousel.Item class="aspect-w-16 aspect-h-9 overflow-hidden transition-all">
-                    {#if image.split(".")[image.split(".").length-1] === "webp"}
+                    {#if image.split(".")[image.split(".").length-1] === "webp" || image.split(".")[image.split(".").length-1] === "png"}
                         <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
                     {:else}
                         <video autoplay muted loop src="{image}" class="object-cover rounded-sm w-full h-full"/>

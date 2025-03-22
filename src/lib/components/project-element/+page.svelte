@@ -8,8 +8,7 @@
     export let tags:string[] = [];
     export let githubLink:string = ""
     export let liveLink:string = ""
-
-    let imageExpanded:boolean = false;
+    export let galleryIsExpandable:boolean = true;
 
 </script>
 
@@ -23,7 +22,7 @@
                 </span>
             </h3>
 
-            <Gallery images={images} class="mb-2 rounded-sm"/>
+            <Gallery images={images} class="mb-2 rounded-sm" galleryIsExpandable={galleryIsExpandable}/>
 
             <ul class="flex gap-2 mb-3 flex-wrap">
                 {#each tags as tag}
