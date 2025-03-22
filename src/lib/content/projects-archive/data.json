@@ -53,6 +53,29 @@
       "visible": true
     },
     {
+      "title": "Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)",
+      "shortDescription": "",
+      "longDescription": "Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.” Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification.",
+      "tags": [
+        "BERT",
+        "Text Classification",
+        "NLP",
+        "Research"
+      ],
+      "filterTags": [
+        "BERT",
+        "Text Classification",
+        "NLP",
+        "Research"
+      ],
+      "images": [
+        "/project-images/thesis/1.png"
+      ],
+      "galleryExpandable": false,
+      "githubLink": "",
+      "liveLink": "https://drive.google.com/file/d/1Rd3-cQgpCzxOvZ_D3MD1n9QL85T0NnFL/view?usp=sharing"
+    },
+    {
       "title": "Tictactoe",
       "shortDescription": "Tictactoe but you place over each other's pieces",
       "longDescription": "Developed in Golang and deployed on AWS, the application offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
