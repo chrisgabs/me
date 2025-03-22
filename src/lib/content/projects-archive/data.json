@@ -12,10 +12,26 @@
       "NextJS",
       "Sockets",
       "JavaFX",
-      "Swing"
+      "Swing",
+      "Diffusion Model",
+      "Transformer",
+      "Research"
     ]
   },
   "data": [
+    {
+      "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
+      "shortDescription": "",
+      "longDescription": "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments.",
+      "tags": ["Diffusion Model", "Transformer", "Research"],
+      "filterTags": ["Diffusion Model", "Transformer", "Research"],
+      "images": [
+        "/project-images/thesis/1.png"
+      ],
+      "galleryExpandable": false,
+      "githubLink": "",
+      "liveLink": "https://drive.google.com/file/d/1Cdlp6OPGYly_OmYrnLY8UAdu11pTSbx4/view"
+    },
     {
       "title": "PH Tech News Digest",
       "shortDescription": "Aggregation of tech news sources in the Philippines",

@@ -1,15 +1,5 @@
 [
   {
-    "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
-    "description": "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments.",
-    "tags": ["Diffusion Model", "Transformer", "Research"],
-    "images": [
-      "/project-images/thesis/1.png"
-    ],
-    "galleryExpandable": false,
-    "liveLink": "https://drive.google.com/file/d/1Cdlp6OPGYly_OmYrnLY8UAdu11pTSbx4/view"
-  },
-  {
     "title": "Tictactoe",
     "description": "Developed in Golang and deployed on AWS, offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
     "tags": ["Golang", "SvelteKit", "AWS"],
@@ -20,6 +10,7 @@
       "/project-images/tictactoe/4.webp",
       "/project-images/tictactoe/5.webp"
     ],
+    "galleryExpandable": false,
     "githubLink": "https://github.com/chrisgabs/tictactoe2",
     "liveLink": "https://game.cbayquen.com"
   },
