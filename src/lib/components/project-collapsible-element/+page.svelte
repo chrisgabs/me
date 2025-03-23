@@ -3,7 +3,7 @@
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { ChevronDown } from "lucide-svelte";
     import Gallery from "$lib/components/utility/gallery.svelte";
-    
+    import { onMount } from "svelte";
     export let title:string = "title";
     export let images:string[] = [];
     export let shortDescription:string = "";
@@ -13,10 +13,15 @@
     export let liveLink:string = ""
     export let galleryIsExpandable:boolean = true;
     export let allCollapsibleOpen:boolean = false;
+    export let expandedByDefault:boolean = true;
     let collapsibleOpen:boolean = false;
     
     $: collapsibleOpen = allCollapsibleOpen;
     $: chevronRotation = collapsibleOpen ? "rotate-180" : "rotate-0";
+
+    onMount(() => {
+        collapsibleOpen = expandedByDefault;
+    });
 
 </script>
 
@@ -47,7 +52,9 @@
     </Collapsible.Trigger>
     <Collapsible.Content class="flex flex-col gap-4 p-4 pt-0">
         
-        <Gallery images={images} galleryIsExpandable={galleryIsExpandable} />
+        {#if images.length > 0}
+            <Gallery images={images} galleryIsExpandable={galleryIsExpandable} />
+        {/if}
 
         <ul class="flex flex-wrap gap-2 group-hover:mb-2">
             {#each tags as tag}
