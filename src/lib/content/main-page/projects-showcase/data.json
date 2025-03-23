@@ -10,6 +10,7 @@
       "/project-images/tictactoe/4.webp",
       "/project-images/tictactoe/5.webp"
     ],
+    "galleryExpandable": false,
     "githubLink": "https://github.com/chrisgabs/tictactoe2",
     "liveLink": "https://game.cbayquen.com"
   },

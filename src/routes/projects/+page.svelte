@@ -117,7 +117,7 @@
     
                 <div class="flex flex-col gap-2">
                     <h3 class="font-bold text-sm">Tags</h3>
-                    <div class="flex gap-4 flex-wrap">
+                    <div class="flex flex-col gap-4">
                         {#each projectsArchive["constants"]["tags"] as tag (tag)}
                             <FilterOption bind:checked={filters[tag]} label={tag}/>
                         {/each}
@@ -152,6 +152,8 @@
                         tags={project["tags"]}
                         githubLink={project["githubLink"]}
                         liveLink={project["liveLink"]}
+                        galleryIsExpandable={project["galleryExpandable"]}
+                        expandedByDefault={project["expandedByDefault"]}
                     />
                 {/if}
             {/each}

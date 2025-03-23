@@ -375,6 +375,7 @@
                         tags={project["tags"]} 
                         githubLink={project["githubLink"]} 
                         liveLink={project["liveLink"]}
+                        galleryIsExpandable={project["galleryExpandable"]}
                     />
                      <!-- content here -->
                 {/each}

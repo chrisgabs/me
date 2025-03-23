@@ -3,20 +3,25 @@
     import * as Collapsible from "$lib/components/ui/collapsible";
     import { ChevronDown } from "lucide-svelte";
     import Gallery from "$lib/components/utility/gallery.svelte";
-    
+    import { onMount } from "svelte";
     export let title:string = "title";
     export let images:string[] = [];
-    export let shortDescription:string = "short description";
-    export let longDescription:string = "long description";
+    export let shortDescription:string = "";
+    export let longDescription:string = "";
     export let tags:string[] = [];
     export let githubLink:string = ""
     export let liveLink:string = ""
-
+    export let galleryIsExpandable:boolean = true;
     export let allCollapsibleOpen:boolean = false;
+    export let expandedByDefault:boolean = true;
     let collapsibleOpen:boolean = false;
     
     $: collapsibleOpen = allCollapsibleOpen;
     $: chevronRotation = collapsibleOpen ? "rotate-180" : "rotate-0";
+
+    onMount(() => {
+        collapsibleOpen = expandedByDefault;
+    });
 
 </script>
 
@@ -30,7 +35,9 @@
         <div class="flex flex-col gap-1 text-start">
             <div class="flex flex-col flex-wrap lg:w-full">
                 <h3 class="text-lg font-bold text-start">{title}</h3>
-                <p class="text-sm leading-relaxed tracking-wide">{shortDescription}</p>
+                {#if shortDescription !== ""}
+                    <p class="text-sm leading-relaxed tracking-wide">{shortDescription}</p>
+                {/if}
             </div>
             {#if !collapsibleOpen}
             <ul class="flex flex-wrap gap-2 group-hover:mb-2">
@@ -45,7 +52,9 @@
     </Collapsible.Trigger>
     <Collapsible.Content class="flex flex-col gap-4 p-4 pt-0">
         
-        <Gallery images={images} />
+        {#if images.length > 0}
+            <Gallery images={images} galleryIsExpandable={galleryIsExpandable} />
+        {/if}
 
         <ul class="flex flex-wrap gap-2 group-hover:mb-2">
             {#each tags as tag}
@@ -63,7 +72,7 @@
             {/if}
             {#if liveLink !== ""}
                  <a href="{liveLink}" target=”_blank” class="link after:ml-1 font-semibold text-sm hover:underline underline-offset-4">
-                     Live Demo
+                     Project Link
                  </a>
             {/if}
         </div>
