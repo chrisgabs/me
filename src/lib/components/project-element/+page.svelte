@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Badge } from "$lib/components/ui/badge";
     import Gallery from "$lib/components/utility/gallery.svelte";
+    import ProjectStructuredData from "$lib/components/ProjectStructuredData.svelte";
 
     export let title:string = "title";
     export let images:string[] = [];
@@ -9,8 +10,19 @@
     export let githubLink:string = ""
     export let liveLink:string = ""
     export let galleryIsExpandable:boolean = true;
+    export let datePublished:string = "";
 
 </script>
+
+<ProjectStructuredData 
+    title={title}
+    description={description}
+    imageUrl={images.length > 0 ? images[0] : ''}
+    technologies={tags}
+    githubUrl={githubLink}
+    demoUrl={liveLink}
+    datePublished={datePublished}
+/>
 
 <li>
     <div class="flex flex-col justify-between rounded-sm p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl md:min-h-[29rem] lg:max-w-xs lg:snap-center" >

@@ -1,7 +1,3 @@
-<svelte:head>
-    <title>Christian Bayquen</title> 
-</svelte:head>
-
 <script lang="ts">
     // import { Button } from "$lib/components/ui/button";
     import { Badge } from "$lib/components/ui/badge";
@@ -13,6 +9,7 @@
     import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
     import { Separator } from "$lib/components/ui/separator";
     import { onMount } from "svelte";
+    import SEO from "$lib/components/SEO.svelte";
     import featuredProjects from "$lib/content/main-page/projects-showcase/data.json"
     import workExperience from "$lib/content/main-page/work-experience/data.json";
     import academicExperience from "$lib/content/main-page/academic-experience/data.json";
@@ -122,10 +119,15 @@
 
 </script>
 
-<!-- <div class="hidden xl:hidden sm:block md:sticky left-0 top-0 bg-slate-950 md:bg-yellow-500 md:bg-slate-500 lg:bg-yellow-300 xl:bg-slate-50 w-full h-[5px]"></div> -->
+<SEO 
+    title="Christian Bayquen"
+    description="Welcome to my personal website! Dive into a self-documentation of my career, where I showcase my personal projects, share insights from my professional endeavors, and express my thoughts through articles on various topics. Join me as I navigate through the ever-evolving landscape of technology and innovation."
+    keywords="Christian Bayquen, developer, software engineer, portfolio, projects, programming, coding, web development"
+    url="https://cbayquen.com"
+/>
 
+<div class="relative overflow-hidden text-zinc-900">
 <div class="flex flex-col w-fit h-fit px-12 sm:max-w-2xl sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
-
     <header class="flex h-svh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
@@ -294,14 +296,14 @@
             <div class="mt-5">
                 <ol class="flex flex-col">
                     {#each workExperience as experience}
-                         <WorkExperience 
-                             datePeriod={experience["date"]}
-                             title={experience["title"]}
-                             company={experience["company"]}
-                             companyWebsite={experience["companyWebsite"]}
-                             description={experience["description"]}
-                             tags={experience["tags"]}
-                         />
+                            <WorkExperience 
+                                datePeriod={experience["date"]}
+                                title={experience["title"]}
+                                company={experience["company"]}
+                                companyWebsite={experience["companyWebsite"]}
+                                description={experience["description"]}
+                                tags={experience["tags"]}
+                            />
                     {/each}
                 </ol>
             </div>
@@ -377,7 +379,7 @@
                         liveLink={project["liveLink"]}
                         galleryIsExpandable={project["galleryExpandable"]}
                     />
-                     <!-- content here -->
+                        <!-- content here -->
                 {/each}
                 <ProjectViewMore/>
             </ol>
@@ -392,4 +394,5 @@
     </section>
     </div>
 
+</div>
 </div>
