@@ -107,6 +107,7 @@
       "images": [
         "/project-images/news/1.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "",
       "liveLink": "https://news.cbayquen.com",
       "visible": true
@@ -135,6 +136,7 @@
         "/project-images/tictactoe/4.webp",
         "/project-images/tictactoe/5.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/chrisgabs/tictactoe2-backend",
       "liveLink": "https://game.cbayquen.com",
       "visible": true
@@ -168,6 +170,7 @@
         "/project-images/gentoo/2.webp",
         "/project-images/gentoo/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/gentoo-webapp",
       "liveLink": "",
       "visible": true
@@ -194,6 +197,7 @@
         "/project-images/textra/2.webp",
         "/project-images/textra/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
       "liveLink": "",
       "visible": true
@@ -218,6 +222,7 @@
         "/project-images/graph/1.webp",
         "/project-images/graph/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
       "liveLink": "",
       "visible": true
@@ -246,6 +251,7 @@
         "/project-images/volunteer/5.webp",
         "/project-images/volunteer/6.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
       "liveLink": "",
       "visible": true
@@ -270,6 +276,7 @@
         "/project-images/huffman/2.webp",
         "/project-images/huffman/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
       "liveLink": "",
       "visible": true
@@ -299,6 +306,7 @@
         "/project-images/events/2.webp",
         "/project-images/events/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
       "liveLink": "",
       "visible": true
@@ -323,6 +331,7 @@
         "/project-images/corba/3.webp",
         "/project-images/corba/4.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/python-java-corba-application",
       "liveLink": "",
       "visible": true
@@ -344,6 +353,7 @@
       "images": [
         "/project-images/me/1.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/chrisgabs/me",
       "liveLink": "https://cbayquen.com",
       "visible": true
@@ -368,6 +378,7 @@
       "images": [
         "/project-images/gradient.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "",
       "liveLink": "",
       "visible": true
@@ -392,6 +403,7 @@
         "/project-images/roots/2.webp",
         "/project-images/roots/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/chrisgabs/bracketing-open-num-methods?tab=readme-ov-file",
       "liveLink": "",
       "visible": true
@@ -415,6 +427,7 @@
         "/project-images/vac-dashboard/2.webp",
         "/project-images/vac-dashboard/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
       "liveLink": "",
       "visible": true
@@ -437,6 +450,7 @@
         "/project-images/calculator/2.webp",
         "/project-images/calculator/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/baguio-vacc-dashboard",
       "liveLink": "",
       "visible": true
@@ -463,6 +477,7 @@
         "/project-images/vac-dashboard/2.webp",
         "/project-images/vac-dashboard/3.webp"
       ],
+      "galleryExpandable": true,
       "githubLink": "https://github.com/chrisgabs/calculator",
       "liveLink": "",
       "visible": true
