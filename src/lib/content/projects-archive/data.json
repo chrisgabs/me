@@ -18,7 +18,7 @@
     {
       "title": "Point of Sale System for Brew Coffee",
       "shortDescription": "",
-      "longDescription": "A point of sale system for a small coffee shop. It is a web application that allows the user to manage the inventory, sales, and customers. It is built with SvelteKit and Tailwind CSS.",
+      "longDescription": "A point of sale system for a small coffee shop. It is a web application that allows the user to manage the inventory and sales.",
       "tags": [
         "Golang",
         "SvelteKit",
