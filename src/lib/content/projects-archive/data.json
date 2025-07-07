@@ -42,6 +42,25 @@
       "expandedByDefault": true
     },
     {
+      "title": "Subic Bay News",
+      "shortDescription": "",
+      "longDescription": "The news website for the Subic Bay Freeport Zone.",
+      "tags": [
+        "Wordpress"
+      ],
+      "filterTags": [
+      ],
+      "images": [
+        "/project-images/sbn/1.png",
+        "/project-images/sbn/2.png"
+      ],
+      "galleryExpandable": true,
+      "githubLink": "",
+      "liveLink": "https://subicbaynews.com",
+      "visible": true,
+      "expandedByDefault": true
+    },
+    {
       "title": "Volunteer management system",
       "shortDescription": "CRUD application to manage events and volunteers",
       "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
