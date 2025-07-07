@@ -71,18 +71,18 @@
     />
     <Dialog.Content
         transition={flyAndScale}
-        class=" fixed left-[50%] top-[50%] z-50 w-full mr-20 max-w-5xl translate-x-[-50%] translate-y-[-50%] bg-background shadow-popover outline-none bg-inherit"
+        class=" fixed left-[50%] top-[50%] z-50 w-full mr-20 max-w-6xl translate-x-[-50%] translate-y-[-50%] bg-background shadow-popover outline-none bg-inherit"
     >
 
         <Carousel.Root bind:api opts={apiOptions} class="group mx-5 border rounded-sm border-slate-700" >
             
             <Carousel.Content class="">
                 {#each images as image}
-                <Carousel.Item class="aspect-w-16 aspect-h-9 overflow-hidden transition-all">
+                <Carousel.Item class=" overflow-hidden transition-all">
                     {#if image.split(".")[image.split(".").length-1] === "webp" || image.split(".")[image.split(".").length-1] === "png"}
-                        <img src="{image}" alt={image} class="object-cover rounded-sm w-full h-full"/>
+                        <img src="{image}" alt={image} class="object-scale-down rounded-sm w-full h-full"/>
                     {:else}
-                        <video autoplay muted loop src="{image}" class="object-cover rounded-sm w-full h-full"/>
+                        <video autoplay muted loop src="{image}" class="object-scale-down rounded-sm w-full h-full"/>
                     {/if}
                 </Carousel.Item>
                 {/each}

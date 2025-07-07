@@ -16,73 +16,59 @@
   },
   "data": [
     {
-      "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
+      "title": "Point of Sale System for Brew Coffee",
       "shortDescription": "",
-      "longDescription": "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments.",
+      "longDescription": "A point of sale system for a small coffee shop. It is a web application that allows the user to manage the inventory, sales, and customers. It is built with SvelteKit and Tailwind CSS.",
       "tags": [
-        "Diffusion Model",
-        "Transformer",
-        "Research"
+        "Golang",
+        "SvelteKit",
+        "PostgreSQL"
       ],
       "filterTags": [
-        "Diffusion Model",
-        "Transformer",
-        "Research"
+        "Golang",
+        "SvelteKit",
+        "PostgreSQL"
       ],
       "images": [
-        "/project-images/thesis/1.png"
+        "/project-images/brew/1.png",
+        "/project-images/brew/4.png",
+        "/project-images/brew/3.png",
+        "/project-images/brew/2.png"
       ],
-      "galleryExpandable": false,
+      "galleryExpandable": true,
       "githubLink": "",
-      "liveLink": "https://drive.google.com/file/d/1Cdlp6OPGYly_OmYrnLY8UAdu11pTSbx4/view",
+      "liveLink": "",
       "visible": true,
-      "expandedByDefault": false
+      "expandedByDefault": true
     },
     {
-      "title": "Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)",
-      "shortDescription": "",
-      "longDescription": "Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.” Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification.",
+      "title": "Volunteer management system",
+      "shortDescription": "CRUD application to manage events and volunteers",
+      "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
       "tags": [
-        "BERT",
-        "Text Classification",
-        "NLP",
-        "Research"
+        "Java",
+        "JavaFX",
+        "MySQL",
+        "CRUD"
       ],
       "filterTags": [
-        "BERT",
-        "Text Classification",
-        "NLP",
-        "Research"
+        "Java",
+        "JavaFX",
+        "MySQL",
+        "CRUD"
       ],
-      "images": [],
-      "galleryExpandable": false,
-      "githubLink": "",
-      "liveLink": "https://drive.google.com/file/d/1BTL9-er0tnToFYi3wlqAspClYw1i9S0h/view?usp=sharing",
-      "visible": true,
-      "expandedByDefault": false
-    },
-    {
-      "title": "Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)",
-      "shortDescription": "",
-      "longDescription": "Accepted for presentation at the International Conference in IT Education (ICITE2023). Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support.",
-      "tags": [
-        "BERT",
-        "Text Classification",
-        "NLP",
-        "Research"
+      "images": [
+        "/project-images/volunteer/1.webp",
+        "/project-images/volunteer/2.webp",
+        "/project-images/volunteer/3.webp",
+        "/project-images/volunteer/4.webp",
+        "/project-images/volunteer/5.webp",
+        "/project-images/volunteer/6.webp"
       ],
-      "filterTags": [
-        "BERT",
-        "Sentiment Analysis",
-        "NLP",
-        "Research"
-      ],
-      "images": [],
-      "galleryExpandable": false,
-      "githubLink": "",
-      "liveLink": "https://drive.google.com/file/d/1Rd3-cQgpCzxOvZ_D3MD1n9QL85T0NnFL/view?usp=sharing",
-      "visible": true,
-      "expandedByDefault": false
+      "galleryExpandable": true,
+      "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
+      "liveLink": "",
+      "visible": true
     },
     {
       "title": "PH Tech News Digest",
@@ -110,35 +96,6 @@
       "galleryExpandable": true,
       "githubLink": "",
       "liveLink": "https://news.cbayquen.com",
-      "visible": true
-    },
-    {
-      "title": "Tictactoe",
-      "shortDescription": "Tictactoe but you place over each other's pieces",
-      "longDescription": "Developed in Golang and deployed on AWS, the application offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
-      "tags": [
-        "Golang",
-        "JS",
-        "SvelteKit",
-        "AWS"
-      ],
-      "filterTags": [
-        "Golang",
-        "SvelteKit",
-        "AWS",
-        "JS/TS",
-        "Sockets"
-      ],
-      "images": [
-        "/project-images/tictactoe/1.mp4",
-        "/project-images/tictactoe/2.webp",
-        "/project-images/tictactoe/3.webp",
-        "/project-images/tictactoe/4.webp",
-        "/project-images/tictactoe/5.webp"
-      ],
-      "galleryExpandable": true,
-      "githubLink": "https://github.com/chrisgabs/tictactoe2-backend",
-      "liveLink": "https://game.cbayquen.com",
       "visible": true
     },
     {
@@ -176,30 +133,32 @@
       "visible": true
     },
     {
-      "title": "Textra",
-      "shortDescription": "Desktop messaging application",
-      "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
+      "title": "Tictactoe",
+      "shortDescription": "Tictactoe but you place over each other's pieces",
+      "longDescription": "Developed in Golang and deployed on AWS, the application offers a two player experience concurrently across multiple rooms. The real-time feature enables players to observe live moves as participants drag their pieces during gameplay, facilitated through WebSocket technology.",
       "tags": [
-        "Java",
-        "JavaFX",
-        "MySQL",
-        "Sockets"
+        "Golang",
+        "JS",
+        "SvelteKit",
+        "AWS"
       ],
       "filterTags": [
-        "Java",
-        "JavaFX",
-        "MySQL",
-        "Sockets",
-        "CRUD"
+        "Golang",
+        "SvelteKit",
+        "AWS",
+        "JS/TS",
+        "Sockets"
       ],
       "images": [
-        "/project-images/textra/1.webp",
-        "/project-images/textra/2.webp",
-        "/project-images/textra/3.webp"
+        "/project-images/tictactoe/1.mp4",
+        "/project-images/tictactoe/2.webp",
+        "/project-images/tictactoe/3.webp",
+        "/project-images/tictactoe/4.webp",
+        "/project-images/tictactoe/5.webp"
       ],
       "galleryExpandable": true,
-      "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
-      "liveLink": "",
+      "githubLink": "https://github.com/chrisgabs/tictactoe2-backend",
+      "liveLink": "https://game.cbayquen.com",
       "visible": true
     },
     {
@@ -224,60 +183,6 @@
       ],
       "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/dijkstra-algorithm-visualizer",
-      "liveLink": "",
-      "visible": true
-    },
-    {
-      "title": "Volunteer management system",
-      "shortDescription": "CRUD application to manage events and volunteers",
-      "longDescription": "An application that enables event managers to create and manage events that volunteers want to take part in.",
-      "tags": [
-        "Java",
-        "JavaFX",
-        "MySQL",
-        "CRUD"
-      ],
-      "filterTags": [
-        "Java",
-        "JavaFX",
-        "MySQL",
-        "CRUD"
-      ],
-      "images": [
-        "/project-images/volunteer/1.webp",
-        "/project-images/volunteer/2.webp",
-        "/project-images/volunteer/3.webp",
-        "/project-images/volunteer/4.webp",
-        "/project-images/volunteer/5.webp",
-        "/project-images/volunteer/6.webp"
-      ],
-      "galleryExpandable": true,
-      "githubLink": "https://github.com/ABCD-EDU/volunteer-management-system",
-      "liveLink": "",
-      "visible": true
-    },
-    {
-      "title": "Huffman tree visualizer",
-      "shortDescription": "Visualize the step by step process of the huffman compression algorithm",
-      "longDescription": "",
-      "tags": [
-        "Java",
-        "Swing",
-        "Visualizer"
-      ],
-      "filterTags": [
-        "Java",
-        "Swing",
-        "Visualizer",
-        "Algorithms"
-      ],
-      "images": [
-        "/project-images/huffman/1.webp",
-        "/project-images/huffman/2.webp",
-        "/project-images/huffman/3.webp"
-      ],
-      "galleryExpandable": true,
-      "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
       "liveLink": "",
       "visible": true
     },
@@ -308,6 +213,100 @@
       ],
       "galleryExpandable": true,
       "githubLink": "https://github.com/ABCD-EDU/events-management-webapp-frontend",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Detection and Categorization of Hateful Speech in Social Media by Fine Tuning BERT Model for Multitask Classification (2022)",
+      "shortDescription": "",
+      "longDescription": "Accepted into Computing Conference 2023 London, UK and was up for publication in Springer series “Lecture Notes in Networks and Systems.” Challenges conventional approaches by introducing a hierarchical and multitask architecture for a single BERT model in the task of text classification.",
+      "tags": [
+        "BERT",
+        "Text Classification",
+        "NLP",
+        "Research"
+      ],
+      "filterTags": [
+        "BERT",
+        "Text Classification",
+        "NLP",
+        "Research"
+      ],
+      "images": [],
+      "galleryExpandable": false,
+      "githubLink": "",
+      "liveLink": "https://drive.google.com/file/d/1BTL9-er0tnToFYi3wlqAspClYw1i9S0h/view?usp=sharing",
+      "visible": true,
+      "expandedByDefault": true
+    },
+    {
+      "title": "A Zero-Shot Approach to Upsampling Single Channel Speech Separation Using a Diffusion Model (2023)",
+      "shortDescription": "",
+      "longDescription": "The study demonstrates the effectiveness of integrating a diffusion upscaling model for post-processing, showcasing the potential for practical applications in real-time audio separation in production environments.",
+      "tags": [
+        "Diffusion Model",
+        "Transformer",
+        "Research"
+      ],
+      "filterTags": [
+        "Diffusion Model",
+        "Transformer",
+        "Research"
+      ],
+      "images": [
+        "/project-images/thesis/1.png"
+      ],
+      "galleryExpandable": false,
+      "githubLink": "",
+      "liveLink": "https://drive.google.com/file/d/1Cdlp6OPGYly_OmYrnLY8UAdu11pTSbx4/view",
+      "visible": true,
+      "expandedByDefault": true
+    },
+    {
+      "title": "Extracting Topics and Sentiments from Baguio City Social Media Using BERTopic and Vader Lexicon-based Sentiment Analysis (2023)",
+      "shortDescription": "",
+      "longDescription": "Accepted for presentation at the International Conference in IT Education (ICITE2023). Developed an innovative approach to analyze social media data related to Baguio City, employing BERTopic for topic modeling and a customized VADER sentiment analysis with dual-language support.",
+      "tags": [
+        "BERT",
+        "Text Classification",
+        "NLP",
+        "Research"
+      ],
+      "filterTags": [
+        "BERT",
+        "Sentiment Analysis",
+        "NLP",
+        "Research"
+      ],
+      "images": [],
+      "galleryExpandable": false,
+      "githubLink": "",
+      "liveLink": "https://drive.google.com/file/d/1Rd3-cQgpCzxOvZ_D3MD1n9QL85T0NnFL/view?usp=sharing",
+      "visible": true,
+      "expandedByDefault": true
+    },
+    {
+      "title": "Huffman tree visualizer",
+      "shortDescription": "Visualize the step by step process of the huffman compression algorithm",
+      "longDescription": "",
+      "tags": [
+        "Java",
+        "Swing",
+        "Visualizer"
+      ],
+      "filterTags": [
+        "Java",
+        "Swing",
+        "Visualizer",
+        "Algorithms"
+      ],
+      "images": [
+        "/project-images/huffman/1.webp",
+        "/project-images/huffman/2.webp",
+        "/project-images/huffman/3.webp"
+      ],
+      "galleryExpandable": true,
+      "githubLink": "https://github.com/ABCD-EDU/huffman-tree-visualizer",
       "liveLink": "",
       "visible": true
     },
@@ -380,6 +379,33 @@
       ],
       "galleryExpandable": true,
       "githubLink": "",
+      "liveLink": "",
+      "visible": true
+    },
+    {
+      "title": "Textra",
+      "shortDescription": "Desktop messaging application",
+      "longDescription": "A desktop application that enables users to message and search for other users, bookmark conversations, and create groups. Implements administrative features such as registration requests and banning of users.",
+      "tags": [
+        "Java",
+        "JavaFX",
+        "MySQL",
+        "Sockets"
+      ],
+      "filterTags": [
+        "Java",
+        "JavaFX",
+        "MySQL",
+        "Sockets",
+        "CRUD"
+      ],
+      "images": [
+        "/project-images/textra/1.webp",
+        "/project-images/textra/2.webp",
+        "/project-images/textra/3.webp"
+      ],
+      "galleryExpandable": true,
+      "githubLink": "https://github.com/ABCD-EDU/textra-messaging-app",
       "liveLink": "",
       "visible": true
     },
