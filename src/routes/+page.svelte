@@ -283,7 +283,7 @@
 
     <section id="experience" class="flex flex-col mb-16">
         <div class="mb-7 w-full">
-            <h2 class="font-bold text-2xl">Professional Background</h2>
+            <h2 class="font-bold text-2xl">Experience</h2>
         </div>
         
         <Tabs.Root value="work" class="min-w-auto">
