@@ -126,8 +126,8 @@
     url="https://cbayquen.com"
 />
 
-<div class="flex flex-col w-fit h-fit px-12 sm:max-w-2xl gap-2 sm:mx-auto md:gap-4 md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 lg:gap-8 xl:gap-12">
-    <header class="flex h-svh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit">
+<div class="flex flex-col w-fit h-fit px-6 md:px-10 sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 border-gray-400">
+    <header class="flex h-svh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit border-x border-inherit p-8">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
             <div id="heading">
@@ -264,9 +264,8 @@
     </header>
 
     <!-- Content -->
-    <div id="content" class="flex flex-col w-full md:pt-24 md:mx-0 md:min lg:max-w-[42rem]">
-
-    <section id="about" class="flex flex-col mb-16">
+    <div id="content" class="flex flex-col w-full xl:min-w-[800px] md:pt-24 md:mx-0 md:min lg:max-w-[42rem] border-inherit border-x md:border-r md:border-l-0">
+    <section id="about" class="content-section border-t md:pt-0 md:border-t-0">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">About Me</h2>
         </div>
@@ -277,11 +276,11 @@
             <!-- <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p> -->
             <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself building innovative and scalable software solutions to improve transportation and create job opportunities for the Filipino people.</p>
             <p class="mb-4 text-justify leading-relaxed">Since printing out my first Hello World in the command line five years ago, I have been avidly learning and thriving to stay at the forefront of technology. As I've written code to solve problems that my friends and clients have been facing, I realized that my journey in tech is not just a profession but a passion that fuels my curiosity and creativity. Programming isn't just a skill; it's a means of creating amazing things! </p>
-            <p class="mb-4 text-justify leading-relaxed">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
+            <p class="text-justify leading-relaxed">I invite you to connect with me for exciting opportunities to collaborate and create impactful software together.</p>
         </div>
     </section>
 
-    <section id="experience" class="flex flex-col mb-16">
+    <section id="experience" class="content-section">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Experience</h2>
         </div>
@@ -296,7 +295,7 @@
             <!-- <div class="mt-3 rounded-sm border shadow-sm p-4"> -->
             <div class="mt-5">
                 <ol class="flex flex-col">
-                    {#each workExperience as experience}
+                    {#each workExperience as experience, index}
                             <WorkExperience 
                                 datePeriod={experience["date"]}
                                 title={experience["title"]}
@@ -304,6 +303,7 @@
                                 companyWebsite={experience["companyWebsite"]}
                                 description={experience["description"]}
                                 tags={experience["tags"]}
+                                lastElement={index === workExperience.length - 1}
                             />
                     {/each}
                 </ol>
@@ -363,7 +363,7 @@
 
     </section>
     
-    <section id="projects" class="flex flex-col mb-16">
+    <section id="projects" class="content-section">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Featured Projects</h2>
         </div>
@@ -387,7 +387,7 @@
         </div>
     </section>
 
-    <section id="writing" class="flex flex-col mb-16">
+    <section id="writing" class="content-section border-b-0">
         <div class="mb-7 w-full">
             <h2 class="font-bold text-2xl">Writing</h2>
         </div>
