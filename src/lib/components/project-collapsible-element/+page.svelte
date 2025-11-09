@@ -30,7 +30,7 @@
             <li><Badge variant="secondary" class="neo-badge">{badge}</Badge></li>
     {/each}
 </ul> -->
-<Collapsible.Root class="w-full h-fit border border-r-4 rounded-sm border-slate-700" bind:open={collapsibleOpen}>
+<Collapsible.Root class="w-full h-fit border border-r-2 border-gray-400" bind:open={collapsibleOpen}>
     <Collapsible.Trigger class="flex justify-between items-center w-full p-4">
         <div class="flex flex-col gap-1 text-start">
             <div class="flex flex-col flex-wrap lg:w-full">
@@ -42,7 +42,7 @@
             {#if !collapsibleOpen}
             <ul class="flex flex-wrap gap-2 group-hover:mb-2">
                 {#each tags as tag}
-                <li><Badge variant="secondary" class="bg-inherit border border-slate-700">{tag}</Badge></li>
+                <li><Badge variant="secondary" class="bg-inherit border border-gray-400">{tag}</Badge></li>
                 <!-- <li class="text-xs font-semibold">{badge} |</li> -->
                 {/each}
             </ul>
