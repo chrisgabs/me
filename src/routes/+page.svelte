@@ -126,7 +126,7 @@
     url="https://cbayquen.com"
 />
 
-<div class="flex flex-col w-fit h-fit px-6 md:px-10 sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 border-gray-400">
+<div class="flex flex-col w-fit h-fit px-3 xs:px-6 md:px-10 sm:max-w-2xl sm:mx-auto md:flex-row md:max-w-full md:mx-0 lg:mx-auto lg:justify-between xl:px-20 border-gray-400">
     <header class="flex h-svh w-full items-center text-slate-900 md:sticky md:top-0 md:pt-24 md:pl-auto md:w-fit border-x border-inherit p-8">
         <div class="flex flex-col justify-between min-h-content gap-20 md:pb-28 md:gap-0 md:h-full md:min-w-80">
             <div class="flex flex-col gap-20">
@@ -185,22 +185,22 @@
             <ul class="flex flex-col gap-2 mb-14">
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "about")}>
-                        <div id="aboutMenuItem" class="h-4 w-px bg-slate-800 rounded-sm transition-all group-hover:w-3"/><p class="">About</p>
+                        <div id="aboutMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">About</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "experience")}>
-                        <div id="experienceMenuItem" class="h-4 w-px bg-slate-800 rounded-sm transition-all group-hover:w-3"/><p class="">Work</p>
+                        <div id="experienceMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Work</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "projects")}>
-                        <div id="projectsMenuItem" class="h-4 w-px bg-slate-800 rounded-sm transition-all group-hover:w-3"/><p class="">Projects</p>
+                        <div id="projectsMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Projects</p>
                     </button>
                 </li>
                 <li class="group">
                     <button class="delay-150 w-40 flex flex-row gap-2 items-center" on:click={(e)=> scrollToSection(e, "writing")}>
-                        <div id="writingMenuItem" class="h-4 w-px bg-slate-800 rounded-sm transition-all group-hover:w-3"/><p class="">Writing</p>
+                        <div id="writingMenuItem" class="h-4 w-px bg-slate-800 transition-all group-hover:w-3"/><p class="">Writing</p>
                     </button>
                 </li>
             </ul>
@@ -234,7 +234,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             <span>Email</span>
                         </DropdownMenu.Trigger>
-                        <DropdownMenu.Content side="top" sideOffset={10} class="flex flex-col gap-1 shadow-none border-slate-500 rounded-sm">
+                        <DropdownMenu.Content side="top" sideOffset={10} class="flex flex-col gap-1 shadow-none border-slate-500 rounded-none">
                             <DropdownMenu.Label><span id="email">cbayquen.dev@gmail.com</span></DropdownMenu.Label>
                             <Separator class="bg-slate-500"></Separator>
                             <DropdownMenu.Item>
@@ -271,7 +271,7 @@
         </div>
         <div class="block">
             <figure title="hello :D" class="float-right mb-1 ml-5 mt-1 lg:ml-6 ">
-                <img src="/about/me.webp" alt={"me"} class="rounded-sm border border-slate-700 h-40 w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 grayscale-[30%] hover:grayscale-[10%] transition-all duration-300"/>
+                <img src="/about/me.webp" alt={"me"} class="border border-gray-400 h-40 w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 grayscale-[30%] hover:grayscale-[10%] transition-all duration-300"/>
             </figure>
             <!-- <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself developing and maintaining enterprise applications for one of the globe's largest corporations.</p> -->
             <p class="mb-4 text-justify leading-relaxed">Greetings! I'm Christian, passionate about tackling challenges, automating processes, and building fun and meaningful applications. I am currently situated in the Philippines, where I find myself building innovative and scalable software solutions to improve transportation and create job opportunities for the Filipino people.</p>
@@ -311,11 +311,11 @@
             </Tabs.Content>
             <Tabs.Content value="school">
             <div class="flex flex-col gap-4 mt-5">
-                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                <div class="border-l border-gray-400 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
                     <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Academic Achievements</span>
                     </div>
-                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-gray-400 sm:pl-4">
                         {#each academicExperience["academicAchievements"] as achievement}
                             <Experience
                                 title={achievement["title"]}
@@ -325,11 +325,11 @@
                         {/each}
                     </ol>
                 </div>
-                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                <div class="border-l border-gray-400 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
                     <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">Research Work</span>
                     </div>
-                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-gray-400 sm:pl-4">
                         {#each academicExperience["researchWork"] as research}
                             <Experience
                                 title={research["title"]}
@@ -343,11 +343,11 @@
             </Tabs.Content>
             <Tabs.Content value="freelance">
             <div class="flex flex-col gap-4 mt-5">
-                <div class="border-l border-slate-600 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
+                <div class="border-l border-gray-400 pl-4 sm:flex sm:flex-row sm:border-none sm:pl-0">
                     <div class="inline-flex whitespace-nowrap mb-2 sm:w-28 sm:whitespace-normal sm:text-right sm:pr-4 sm:mt-2">
                         <span class="overflow-auto text-xs font-semibold sm:w-28">2022 - 2023</span>
                     </div>
-                    <ol class="flex flex-col gap-4 sm:border-l sm:border-slate-600 sm:pl-4">
+                    <ol class="flex flex-col gap-4 sm:border-l sm:border-gray-400 sm:pl-4">
                         {#each freelanceExperience as freelance}
                             <Experience
                                 title={freelance["title"]}
@@ -369,7 +369,7 @@
         </div>
         <div>
             <!-- <ol class="section-with-scrollbar flex flex-col gap-6 lg:flex-row lg:overflow-hidden lg:snap-x lg:pb-2 lg:hover:overflow-x-auto"> -->
-            <ol class="flex flex-col gap-6 lg:flex-row lg:flex-wrap lg:items-start">
+            <ol class="flex flex-col gap-6 xl:flex-row xl:flex-wrap xl:items-start">
                 {#each featuredProjects as project}
                     <Project
                         title={project["title"]} 

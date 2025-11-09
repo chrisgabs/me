@@ -16,19 +16,23 @@
             <span class="overflow-auto font-semibold text-xs sm:w-28 sm:mt-2 sm:mr-4 sm:text-right">{datePeriod}</span>
     </div>
     <!-- <div class="absolute bg-slate-700 rounded-full left-[2.6rem] w-3.5 h-3.5 mt-0.5 sm:hidden"/> -->
-    <div class="flex flex-col gap-3 border-l border-solid border-slate-700 pl-4 {lastElement ? "pb-0" : "pb-10"} transition-all ">
+    <div class="flex flex-col gap-3 sm:border-l border-solid border-gray-400 sm:pl-4 {lastElement ? "pb-0" : "pb-10"} transition-all ">
         <div class="inline-flex whitespace-nowrap sm:hidden">
             <span class="overflow-auto font-semibold text-xs">{datePeriod}</span>
         </div>
         <div>
             <h3 class="mb-1 flex-wrap">
-                <span class=" font-bold text-lg leading-normal sm:text-xl md:text-lg">{title} -
+                <span class=" font-bold text-lg leading-normal sm:text-xl md:text-lg">{title}
                     {#if companyWebsite !== ""}
-                         <a href={companyWebsite} target="_blank" class="inline-block after:inline-block underline-offset-4 link cursor-pointer hover:underline">
-                             {company}</a>
+                         <a href={companyWebsite} 
+                            target="_blank" 
+                            class="font-normal text-xs inline-block after:inline-block underline-offset-4 link cursor-pointer hover:underline">
+                            @ {company}
+                        </a>
                     {:else}
-                         <span>
-                             {company}</span>
+                        <span class="font-normal text-xs">
+                            @ {company}
+                        </span>
                     {/if}
                 </span>
             </h3>

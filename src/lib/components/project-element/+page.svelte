@@ -25,7 +25,7 @@
 />
 
 <li>
-    <div class="flex flex-col justify-between rounded-sm p-4 border-l border-t border-b-4 border-r-4 border-slate-700 max-w-xl md:min-h-[29rem] lg:max-w-xs lg:snap-center" >
+    <div class="flex flex-col justify-between p-4 border-l border-t border-b-2 border-r-2 border-gray-400 max-w-xl md:min-h-[29rem] xl:max-w-xs lg:snap-center" >
     <!-- <div class="flex flex-col gap-1 p-4 border shadow-md max-w-xl lg:max-w-xs lg:snap-center"> -->
         <div class="flex flex-col gap-1">
             <h3 class="mb-3">
@@ -34,7 +34,7 @@
                 </span>
             </h3>
 
-            <Gallery images={images} class="mb-2 rounded-sm" galleryIsExpandable={galleryIsExpandable}/>
+            <Gallery images={images} class="mb-2 border-gray-400" galleryIsExpandable={galleryIsExpandable}/>
 
             <ul class="flex gap-2 mb-3 flex-wrap">
                 {#each tags as tag}
